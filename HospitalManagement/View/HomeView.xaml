@@ -7,19 +7,91 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1100">
 
-    <Border Background="White" CornerRadius="0,8,8,0" SnapsToDevicePixels="True">
+    <Border Background="#e4ebed" CornerRadius="0,8,8,0" SnapsToDevicePixels="True">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <Grid Grid.Column="0">
-                <Button Content="Páciensek" Style="{StaticResource HomeBtnStyle}" Margin="150,0,0,0"/>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Border CornerRadius="12" Background="White" Margin="100,40,100,40">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Alkalmazottak száma" FontSize="24" FontWeight="Medium" Foreground="#161e29" VerticalAlignment="Center" Margin="15,10,0,0"/>
+                            <TextBlock Grid.Row="1" Text="50" FontSize="45" FontWeight="Bold" Foreground="#161e29" VerticalAlignment="Center" Margin="15,-25,0,0"/>
+                        </Grid>
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="7" Opacity="0.2" />
+                        </Border.Effect>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Border CornerRadius="12" Background="White" Margin="100,40,100,40">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="Páciensek száma" FontSize="24" FontWeight="Medium" Foreground="#161e29" VerticalAlignment="Center" Margin="15,10,0,0"/>
+                            <TextBlock Grid.Row="1" Text="120" FontSize="45" FontWeight="Bold" Foreground="#161e29" VerticalAlignment="Center" Margin="15,-25,0,0"/>
+                        </Grid>
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="7" Opacity="0.2" />
+                        </Border.Effect>
+                    </Border>
+                </Grid>
             </Grid>
 
-            <Grid Grid.Column="1">
-                <Button Content="Alkalmazottak" Style="{StaticResource HomeBtnStyle}" Margin="0,0,150,0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <TextBlock Text="Alkalmazottak" FontSize="24" FontWeight="SemiBold" Foreground="#161e29" Margin="30,0,0,0"/>
+                    <Border Background="White" CornerRadius="12" Margin="30,40,15,30">
+                        <DataGrid x:Name="CustomDataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
+                                <DataGridTextColumn Header="Full name" Width="150" Binding="{Binding FullName}"/>
+                                <DataGridTextColumn Header="Neptun code" Width="*" Binding="{Binding NeptunCode}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" Opacity="0.2" BlurRadius="20" ShadowDepth="10"/>
+                        </Border.Effect>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <TextBlock Text="Páciensek" FontSize="24" FontWeight="SemiBold" Foreground="#161e29" Margin="30,0,0,0"/>
+                    <Border Background="White" CornerRadius="12" Margin="15,40,30,30">
+                        <DataGrid x:Name="CustomDataGrid2" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
+                                <DataGridTextColumn Header="Full name" Width="150" Binding="{Binding FullName}"/>
+                                <DataGridTextColumn Header="Neptun code" Width="*" Binding="{Binding NeptunCode}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" Opacity="0.2" BlurRadius="20" ShadowDepth="10"/>
+                        </Border.Effect>
+                    </Border>
+                </Grid>
             </Grid>
         </Grid>
     </Border>

@@ -23,7 +23,7 @@ namespace HospitalManagement
             SetActiveUserControl(HomeView);
         }
 
-        private void SetActiveUserControl(UserControl userControl)
+        public void SetActiveUserControl(UserControl userControl)
         {
             HomeView.Visibility = Visibility.Collapsed;
             PatientsView.Visibility = Visibility.Collapsed;

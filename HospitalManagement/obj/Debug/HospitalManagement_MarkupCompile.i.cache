@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Szofttech. Beadandó\HospitalManagement\App.xaml
-6392338052
+61439598958
 
 9-237508360
 13-38814620
-MainWindow.xaml;Resources\HomeViewButtonStyle.xaml;Resources\MenuButtonStyle.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\PatientsView.xaml;
+MainWindow.xaml;Resources\DataGridStyle.xaml;Resources\MenuButtonStyle.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\PatientsView.xaml;
 
 True
 
