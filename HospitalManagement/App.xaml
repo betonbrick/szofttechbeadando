@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources\MenuButtonStyle.xaml"/>
                 <ResourceDictionary Source="Resources\DataGridStyle.xaml"/>
+                <ResourceDictionary Source="Resources\InteractionButtonsStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

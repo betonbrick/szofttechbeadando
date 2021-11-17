@@ -5,8 +5,63 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HospitalManagement.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="800" d:DesignWidth="1100">
+
+    <Border Background="#e4ebed" CornerRadius="0,8,8,0" SnapsToDevicePixels="True">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="350"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="Alkalmazottak kezelése" FontSize="32" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <TextBlock Text="Beosztás" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <RadioButton x:Name="rbDoctor" Content="Doktor" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0"/>
+                    <RadioButton x:Name="rbNurse" Content="Nővér" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="280,0,0,0"/>
+                    <RadioButton x:Name="rbPartTime" Content="Részmunkaidős" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="390,0,0,0"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock Text="Teljes név" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtFullName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBlock Text="Életkor" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0"/>
+                    <TextBox x:Name="txtAge" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0" BorderThickness="0"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                </Grid>
+
+                <Grid Grid.Row="3">
+                </Grid>
+
+                <Grid Grid.Row="4">
+                </Grid>
+
+                <Grid Grid.Row="5">
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2">
+            </Grid>
             
-    </Grid>
+            <Grid Grid.Row="3">
+            </Grid>
+        </Grid>
+    </Border>
 </UserControl>

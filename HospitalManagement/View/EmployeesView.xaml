@@ -5,8 +5,88 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HospitalManagement.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="800" d:DesignWidth="1100">
+    
+    <Border Background="#e4ebed" CornerRadius="0,8,8,0" SnapsToDevicePixels="True">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="280"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="Alkalmazottak kezelése" FontSize="32" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <TextBlock Text="Beosztás" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <RadioButton x:Name="rbDoctor" Content="Doktor" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0"/>
+                    <RadioButton x:Name="rbNurse" Content="Nővér" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="280,0,0,0"/>
+                    <RadioButton x:Name="rbPartTime" Content="Részmunkaidős" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="390,0,0,0"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock Text="Teljes név" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtFullName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBlock Text="Életkor" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0"/>
+                    <TextBox x:Name="txtAge" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0" BorderThickness="0"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <TextBlock Text="Település" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtSettlement" FontSize="22" Width="220" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBlock Text="Lakcím" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="440,0,0,0"/>
+                    <TextBox x:Name="txtAddress" FontSize="22" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <TextBlock Text="Email" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtEmail" FontSize="22" Width="270" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBlock Text="Telefon" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0"/>
+                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="590,0,0,0" BorderThickness="0"/>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <TextBlock Text="Szakterület" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtSpecialty" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBlock Text="Fizetés" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="430,0,0,0"/>
+                    <TextBox x:Name="txtSalary" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0"/>
+                </Grid>
+
+                <Grid Grid.Row="5">
+                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}"/>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
+                    <DataGrid x:Name="CustomDataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Full name" Width="150" Binding="{Binding FullName}"/>
+                            <DataGridTextColumn Header="Neptun code" Width="*" Binding="{Binding NeptunCode}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" Opacity="0.2" BlurRadius="20" ShadowDepth="10"/>
+                    </Border.Effect>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="3">
+            </Grid>
+        </Grid>
+    </Border>
 </UserControl>

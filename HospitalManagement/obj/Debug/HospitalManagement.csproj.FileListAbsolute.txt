@@ -23,4 +23,5 @@ D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\EmployeesView.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\HomeView.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\PatientsView.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\DataGridStyle.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\InteractionButtonsStyle.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
