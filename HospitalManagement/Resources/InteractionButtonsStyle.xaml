@@ -50,7 +50,7 @@
                 <ControlTemplate TargetType="Button">
 
                     <!--BUTTON ALAK-->
-                    <Border x:Name="BtnBorder" Background="{TemplateBinding Background}" BorderThickness="0" Width="180" Height="40" CornerRadius="12">
+                    <Border x:Name="BtnBorder" Background="{TemplateBinding Background}" BorderThickness="0" Width="120" Height="40" CornerRadius="12">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
 
@@ -59,14 +59,52 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="BtnBorder" Property="Background">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="#5594e6"/>
+                                    <SolidColorBrush Color="#d64957"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="BtnBorder" Property="Background">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="#1c4b8c"/>
+                                    <SolidColorBrush Color="#c21d2d"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--UPDATE BUTTON-->
+    <Style x:Key="UpdateBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="#15bd63"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <!--BUTTON ALAK-->
+                    <Border x:Name="BtnBorder" Background="{TemplateBinding Background}" BorderThickness="0" Width="120" Height="40" CornerRadius="12">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                    <!--EGÉR MŰVELET-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#24e37d"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#188f50"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
