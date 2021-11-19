@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HospitalManagement.View"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1100">
+             d:DesignHeight="800" d:DesignWidth="1300">
     
     <Border Background="#e4ebed" CornerRadius="0,8,8,0" SnapsToDevicePixels="True">
         <Grid>
@@ -66,17 +66,23 @@
                 </Grid>
 
                 <Grid Grid.Row="5">
-                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}"/>
+                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0"/>
                 </Grid>
             </Grid>
 
             <Grid Grid.Row="2">
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
-                    <DataGrid x:Name="CustomDataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
-                            <DataGridTextColumn Header="Full name" Width="150" Binding="{Binding FullName}"/>
-                            <DataGridTextColumn Header="Neptun code" Width="*" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Név" Width="auto" Binding="{Binding FullName}"/>
+                            <DataGridTextColumn Header="Életkor" Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Telep." Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Lakcím" Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Telefon" Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Szakterület" Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Fizetés" Width="auto" Binding="{Binding NeptunCode}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Border.Effect>

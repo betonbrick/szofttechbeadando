@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HospitalManagement"
         xmlns:vw="clr-namespace:HospitalManagement.View"
         mc:Ignorable="d"
-        Height="800" Width="1300" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Transparent" AllowsTransparency="True" SnapsToDevicePixels="True">
+        Height="800" Width="1500" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Transparent" AllowsTransparency="True" SnapsToDevicePixels="True">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
