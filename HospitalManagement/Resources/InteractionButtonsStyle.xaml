@@ -115,4 +115,42 @@
         </Setter>
     </Style>
 
+    <!--PRINT BUTTON-->
+    <Style x:Key="PrintBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="#cc6d1b"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <!--BUTTON ALAK-->
+                    <Border x:Name="BtnBorder" Background="{TemplateBinding Background}" BorderThickness="0" Width="120" Height="40" CornerRadius="12">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                    <!--EGÉR MŰVELET-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#d4833d"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#824816"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
