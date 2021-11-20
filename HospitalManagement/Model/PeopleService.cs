@@ -75,5 +75,62 @@ namespace HospitalManagement.Model
             }
             return patientDTOs;
         }
+
+        // EMPLOYEE HOZZÁADÁSA
+        public bool addEmployee(EmployeeDTO newEmployee)
+        {
+            bool isEmpAdded = false;
+            if (newEmployee.Age < 16 || newEmployee.Age > 64)
+                throw new ArgumentException("Az alkalmazott életkora nem megfelelő.");
+
+            try
+            {
+                var employee = new Employees();
+                employee.Id = newEmployee.Id;
+                employee.Name = newEmployee.Name;
+                employee.Age = newEmployee.Age;
+                employee.Settlement = newEmployee.Settlement;
+                employee.Address = newEmployee.Address;
+                employee.Email = newEmployee.Email;
+                employee.Phone = newEmployee.Phone;
+                employee.Speciality = newEmployee.Speciality;
+                employee.Salary = newEmployee.Salary;
+
+                employeeEntities.Employees.Add(employee);
+                var numberOfRowsAffected = employeeEntities.SaveChanges();
+                isEmpAdded = numberOfRowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return isEmpAdded;
+        }
+
+        // PATIENT HOZZÁADÁSA
+        public bool addPatient(PatientDTO newPatient)
+        {
+            bool isPatAdded = false;
+            try
+            {
+                var patient = new Patients();
+                patient.Id = newPatient.Id;
+                patient.Name = newPatient.Name;
+                patient.Age = newPatient.Age;
+                patient.Settlement = newPatient.Settlement;
+                patient.Address = newPatient.Address;
+                patient.Email = newPatient.Email;
+                patient.Phone = newPatient.Phone;
+
+                patientEntities.Patients.Add(patient);
+                var numberOfRowsAffected = patientEntities.SaveChanges();
+                isPatAdded = numberOfRowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return isPatAdded;
+        }
     }
 }
