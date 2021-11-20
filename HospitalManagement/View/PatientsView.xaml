@@ -17,7 +17,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <TextBlock Text="Alkalmazottak kezelése" FontSize="32" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                <TextBlock Text="Betegek kezelése" FontSize="32" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
             </Grid>
 
             <Grid Grid.Row="1">

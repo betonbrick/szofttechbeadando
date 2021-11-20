@@ -153,4 +153,39 @@
         </Setter>
     </Style>
 
+    <!--SEARCH BUTTON-->
+    <Style x:Key="SearchBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <!--BUTTON ALAK-->
+                    <Border x:Name="BtnBorder" Background="{TemplateBinding Background}" BorderThickness="0" Width="40" Height="40" CornerRadius="12">
+                        <Image Source="../Assets/search.png" Width="27" Height="27" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Border>
+
+                    <!--EGÉR MŰVELET-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#212121"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#363636"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
