@@ -39,50 +39,50 @@
 
                 <Grid Grid.Row="1">
                     <TextBlock Text="Teljes név" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtFullName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Name, Mode=TwoWay}"/>
                     <TextBlock Text="Életkor" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0"/>
-                    <TextBox x:Name="txtAge" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtAge" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Age, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="2">
                     <TextBlock Text="Település" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtSettlement" FontSize="22" Width="220" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtSettlement" FontSize="22" Width="220" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Settlement, Mode=TwoWay}"/>
                     <TextBlock Text="Lakcím" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="440,0,0,0"/>
-                    <TextBox x:Name="txtAddress" FontSize="22" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtAddress" FontSize="22" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Address, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="3">
                     <TextBlock Text="Email" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtEmail" FontSize="22" Width="270" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtEmail" FontSize="22" Width="270" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Email, Mode=TwoWay}"/>
                     <TextBlock Text="Telefon" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0"/>
-                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="590,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="590,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Phone, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="4">
                     <TextBlock Text="Szakterület" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtSpecialty" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtSpecialty" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Speciality, Mode=TwoWay}"/>
                     <TextBlock Text="Fizetés" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="430,0,0,0"/>
-                    <TextBox x:Name="txtSalary" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0"/>
+                    <TextBox x:Name="txtSalary" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Salary, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="5">
-                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0"/>
+                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SaveEmp}"/>
                 </Grid>
             </Grid>
 
             <Grid Grid.Row="2">
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
-                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
-                            <DataGridTextColumn Header="Név" Width="auto" Binding="{Binding FullName}"/>
-                            <DataGridTextColumn Header="Életkor" Width="auto" Binding="{Binding NeptunCode}"/>
-                            <DataGridTextColumn Header="Telep." Width="auto" Binding="{Binding NeptunCode}"/>
-                            <DataGridTextColumn Header="Lakcím" Width="auto" Binding="{Binding NeptunCode}"/>
-                            <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding NeptunCode}"/>
-                            <DataGridTextColumn Header="Telefon" Width="auto" Binding="{Binding NeptunCode}"/>
-                            <DataGridTextColumn Header="Szakterület" Width="auto" Binding="{Binding NeptunCode}"/>
-                            <DataGridTextColumn Header="Fizetés" Width="auto" Binding="{Binding NeptunCode}"/>
+                            <DataGridTextColumn Header="Név" Width="auto" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Életkor" Width="auto" Binding="{Binding Age}"/>
+                            <DataGridTextColumn Header="Telep." Width="auto" Binding="{Binding Settlement}"/>
+                            <DataGridTextColumn Header="Lakcím" Width="auto" Binding="{Binding Address}"/>
+                            <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding Email}"/>
+                            <DataGridTextColumn Header="Telefon" Width="auto" Binding="{Binding Phone}"/>
+                            <DataGridTextColumn Header="Szakterület" Width="auto" Binding="{Binding Speciality}"/>
+                            <DataGridTextColumn Header="Fizetés" Width="auto" Binding="{Binding Salary}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Border.Effect>
@@ -93,10 +93,12 @@
 
             <Grid Grid.Row="3">
                 <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0"/>
-                <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0"/>
-                <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0"/>
-                <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0"/>
+                <TextBlock x:Name="messageBlock" FontSize="20" FontWeight="SemiBold" Foreground="Red" Text="{Binding Path=Message}"/>
+                <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchEmp}"/>
+                <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeleteEmp}"/>
+                <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdateEmp}"/>
                 <Button Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                <!-- A NYOMTATÁSNAK KELL COMMAND -->
             </Grid>
         </Grid>
     </Border>
