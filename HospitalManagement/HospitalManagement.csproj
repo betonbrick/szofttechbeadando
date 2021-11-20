@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,6 +72,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Employees.cs">
+      <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HospitalMgmntDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalMgmntDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HospitalMgmntDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HospitalMgmntDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Patients.cs">
+      <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\EmployeesView.xaml.cs">
       <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>
@@ -134,6 +157,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\HospitalMgmntDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HospitalMgmntDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\HospitalMgmntDbModel.edmx.diagram">
+      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,9 +173,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\HospitalMgmntDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalMgmntDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\HospitalMgmntDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalMgmntDbModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.6.5.1\build\Fody.targets" Condition="Exists('packages\Fody.6.5.1\build\Fody.targets')" />

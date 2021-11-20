@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/search.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/hospitalmgmntdbmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/hospitalmgmntdbmodel.tt")]
 
 
