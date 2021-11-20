@@ -42,6 +42,7 @@
                     <TextBox x:Name="txtName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Name, Mode=TwoWay}"/>
                     <TextBlock Text="Életkor" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0"/>
                     <TextBox x:Name="txtAge" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Age, Mode=TwoWay}"/>
+                    <TextBox x:Name="txtId" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="739,8,0,9" BorderThickness="0" Text="{Binding Path=CurrEmp.Id, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="2">
@@ -66,7 +67,7 @@
                 </Grid>
 
                 <Grid Grid.Row="5">
-                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SaveEmp}"/>
+                    <Button x:Name="btnSaveEmp" Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SaveEmp}"/>
                 </Grid>
             </Grid>
 
@@ -74,15 +75,15 @@
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
                     <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
-                            <DataGridTextColumn Header="Név" Width="auto" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="Életkor" Width="auto" Binding="{Binding Age}"/>
-                            <DataGridTextColumn Header="Telep." Width="auto" Binding="{Binding Settlement}"/>
-                            <DataGridTextColumn Header="Lakcím" Width="auto" Binding="{Binding Address}"/>
-                            <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding Email}"/>
-                            <DataGridTextColumn Header="Telefon" Width="auto" Binding="{Binding Phone}"/>
-                            <DataGridTextColumn Header="Szakterület" Width="auto" Binding="{Binding Speciality}"/>
-                            <DataGridTextColumn Header="Fizetés" Width="auto" Binding="{Binding Salary}"/>
+                            <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Path=Id}"/>
+                            <DataGridTextColumn Header="Név" Width="auto" Binding="{Binding Path=Name}"/>
+                            <DataGridTextColumn Header="Életkor" Width="auto" Binding="{Binding Path=Age}"/>
+                            <DataGridTextColumn Header="Telep." Width="auto" Binding="{Binding Path=Settlement}"/>
+                            <DataGridTextColumn Header="Lakcím" Width="auto" Binding="{Binding Path=Address}"/>
+                            <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding Path=Email}"/>
+                            <DataGridTextColumn Header="Telefon" Width="auto" Binding="{Binding Path=Phone}"/>
+                            <DataGridTextColumn Header="Szakterület" Width="auto" Binding="{Binding Path=Speciality}"/>
+                            <DataGridTextColumn Header="Fizetés" Width="auto" Binding="{Binding Path=Salary}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Border.Effect>

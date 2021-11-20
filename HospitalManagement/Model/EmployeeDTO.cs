@@ -13,6 +13,5 @@ namespace HospitalManagement.Model
         public int Phone { get; set; }
         public string Speciality { get; set; }
         public int Salary { get; set; }
-
     }
 }
