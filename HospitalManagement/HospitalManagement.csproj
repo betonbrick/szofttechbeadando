@@ -72,6 +72,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\EmployeeDTO.cs" />
     <Compile Include="Model\Employees.cs">
       <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
     </Compile>
@@ -90,9 +91,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\PatientDTO.cs" />
     <Compile Include="Model\Patients.cs">
       <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\PeopleService.cs" />
+    <Compile Include="ViewModel\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Base\RelayCommand.cs" />
+    <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\PatientViewModel.cs" />
     <Compile Include="View\EmployeesView.xaml.cs">
       <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>
