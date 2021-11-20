@@ -132,5 +132,147 @@ namespace HospitalManagement.Model
             }
             return isPatAdded;
         }
+
+        // EMPLOYEE FRISSÍTÉSE
+        public bool updateEmployee(EmployeeDTO employeeUpdate)
+        {
+            bool isEmpUpdated = false;
+            try
+            {
+                var employee = employeeEntities.Employees.Find(employeeUpdate.Id);
+                employee.Name = employeeUpdate.Name;
+                employee.Age = employeeUpdate.Age;
+                employee.Settlement = employeeUpdate.Settlement;
+                employee.Address = employeeUpdate.Address;
+                employee.Email = employeeUpdate.Email;
+                employee.Phone = employeeUpdate.Phone;
+                employee.Speciality = employeeUpdate.Speciality;
+                employee.Salary = employeeUpdate.Salary;
+                var numberOfRowsAffected = employeeEntities.SaveChanges();
+                isEmpUpdated = numberOfRowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return isEmpUpdated;
+        }
+
+        // PATIENT FRISSÍTÉSE
+        public bool updatePatient(PatientDTO patientUpdate)
+        {
+            bool isPatUpdated = false;
+            try
+            {
+                var patient = patientEntities.Patients.Find(patientUpdate.Id);
+                patient.Name = patientUpdate.Name;
+                patient.Age = patientUpdate.Age;
+                patient.Settlement = patientUpdate.Settlement;
+                patient.Address = patientUpdate.Address;
+                patient.Email = patientUpdate.Email;
+                patient.Phone = patientUpdate.Phone;
+                var numberOfRowsAffected = patientEntities.SaveChanges();
+                isPatUpdated = numberOfRowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return isPatUpdated;
+        }
+
+        // EMPLOYEE TÖRLÉSE
+        public bool deleteEmployee(int id)
+        {
+            bool isEmpDeleted = false;
+            try
+            {
+                var employee = employeeEntities.Employees.Find(id);
+                employeeEntities.Employees.Remove(employee);
+                var numberOfRowsEffected = employeeEntities.SaveChanges();
+                isEmpDeleted = numberOfRowsEffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return isEmpDeleted;
+        }
+
+        // PATIENT TÖRLÉSE
+        public bool deletePatient(int id)
+        {
+            bool isPatDeleted = false;
+            try
+            {
+                var patient = patientEntities.Patients.Find(id);
+                patientEntities.Patients.Remove(patient);
+                var numberOfRowsEffected = patientEntities.SaveChanges();
+                isPatDeleted = numberOfRowsEffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return isPatDeleted;
+        }
+
+        // EMPLOYEE KERESÉSE
+        public EmployeeDTO searchEmployee(int id)
+        {
+            EmployeeDTO employeeDTO = null;
+            try
+            {
+                var employee = employeeEntities.Employees.Find(id);
+                if (employee != null)
+                {
+                    employeeDTO = new EmployeeDTO()
+                    {
+                        Id = employee.Id,
+                        Name = employee.Name,
+                        Age = employee.Age,
+                        Settlement = employee.Settlement,
+                        Address = employee.Address,
+                        Email = employee.Email,
+                        Phone = employee.Phone,
+                        Speciality = employee.Speciality,
+                        Salary = employee.Salary
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return employeeDTO;
+        }
+
+        // PATIENT KERESÉSE
+        public PatientDTO searchPatient(int id)
+        {
+            PatientDTO patientDTO = null;
+            try
+            {
+                var patient = patientEntities.Patients.Find(id);
+                if (patient != null)
+                {
+                    patientDTO = new PatientDTO()
+                    {
+                        Id = patient.Id,
+                        Name = patient.Name,
+                        Age = patient.Age,
+                        Settlement = patient.Settlement,
+                        Address = patient.Address,
+                        Email = patient.Email,
+                        Phone = patient.Phone
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return patientDTO;
+        }
     }
 }
