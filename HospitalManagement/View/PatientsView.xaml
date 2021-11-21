@@ -29,10 +29,12 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-                    <TextBlock Text="Teljes név" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtFullName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Name, Mode=TwoWay}"/>
-                    <TextBlock Text="Életkor" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0"/>
-                    <TextBox x:Name="txtAge" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Age, Mode=TwoWay}"/>
+                    <TextBlock Text="Azon." FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtId" FontSize="22" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Id, Mode=TwoWay}"/>
+                    <TextBlock Text="Teljes név" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="280,0,0,0"/>
+                    <TextBox x:Name="txtName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Name, Mode=TwoWay}"/>
+                    <TextBlock Text="Életkor" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="670,0,0,0"/>
+                    <TextBox x:Name="txtAge" FontSize="22" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="760,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Age, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="1">
@@ -50,6 +52,7 @@
                 </Grid>
 
                 <Grid Grid.Row="3">
+                    <TextBlock x:Name="messageBlock" Width="500" FontSize="20" FontWeight="SemiBold" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Text="{Binding Path=Message}"/>
                     <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SavePat}"/>
                 </Grid>
             </Grid>
@@ -58,13 +61,13 @@
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
                     <DataGrid x:Name="dgvPatients" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Patients, Mode=TwoWay}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Path=Id}"/>
-                            <DataGridTextColumn Header="Név" Width="auto" Binding="{Binding Path=Name}"/>
-                            <DataGridTextColumn Header="Életkor" Width="auto" Binding="{Binding Path=Age}"/>
-                            <DataGridTextColumn Header="Telep." Width="auto" Binding="{Binding Path=Settlement}"/>
-                            <DataGridTextColumn Header="Lakcím" Width="auto" Binding="{Binding Path=Address}"/>
-                            <DataGridTextColumn Header="Email" Width="auto" Binding="{Binding Path=Email}"/>
-                            <DataGridTextColumn Header="Telefon" Width="auto" Binding="{Binding Path=Phone}"/>
+                            <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
+                            <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>
+                            <DataGridTextColumn Header="Életkor" Width="100" Binding="{Binding Path=Age}"/>
+                            <DataGridTextColumn Header="Telep." Width="200" Binding="{Binding Path=Settlement}"/>
+                            <DataGridTextColumn Header="Lakcím" Width="200" Binding="{Binding Path=Address}"/>
+                            <DataGridTextColumn Header="Email" Width="200" Binding="{Binding Path=Email}"/>
+                            <DataGridTextColumn Header="Telefon" Width="*" Binding="{Binding Path=Phone}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Border.Effect>
@@ -75,7 +78,6 @@
             
             <Grid Grid.Row="3">
                 <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0"/>
-                <TextBlock x:Name="messageBlock" FontSize="20" FontWeight="SemiBold" Foreground="Red" Text="{Binding Path=Message}"/>
                 <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchPat}"/>
                 <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}"/>
                 <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}"/>
