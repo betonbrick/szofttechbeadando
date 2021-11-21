@@ -72,6 +72,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\EmployeeDTO.cs" />
     <Compile Include="Model\Employees.cs">
       <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
@@ -108,6 +111,10 @@
     <Compile Include="View\PatientsView.xaml.cs">
       <DependentUpon>PatientsView.xaml</DependentUpon>
     </Compile>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -180,6 +187,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\login.png" />
     <Content Include="Model\HospitalMgmntDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
