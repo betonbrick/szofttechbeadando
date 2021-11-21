@@ -68,6 +68,7 @@
 
                 <Grid Grid.Row="5">
                     <Button x:Name="btnSaveEmp" Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SaveEmp}"/>
+                    <TextBlock x:Name="messageBlock" Width="500" FontSize="20" FontWeight="SemiBold" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Path=Message}"/>
                 </Grid>
             </Grid>
 
@@ -93,8 +94,7 @@
             </Grid>
 
             <Grid Grid.Row="3">
-                <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0"/>
-                <TextBlock x:Name="messageBlock" FontSize="20" FontWeight="SemiBold" Foreground="Red" Text="{Binding Path=Message}"/>
+                <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Id, Mode=TwoWay}"/>
                 <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchEmp}"/>
                 <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeleteEmp}"/>
                 <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdateEmp}"/>
