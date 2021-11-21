@@ -278,7 +278,7 @@ namespace HospitalManagement.Model
         // ÖSSZES EMPLOYEE SZÁMA xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         public int countAllEmployees()
         {
-            int count = 0;
+            int count;
             try
             {
                 count = (from employee in employeeEntities.Employees where employee.Id == '1' from emp in employee.Name select emp).Count();

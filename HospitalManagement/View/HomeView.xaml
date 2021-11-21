@@ -29,7 +29,7 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0" Text="Alkalmazottak száma" FontSize="24" FontWeight="Medium" Foreground="#161e29" VerticalAlignment="Center" Margin="15,10,0,0"/>
-                            <TextBlock Grid.Row="1" Text="{Binding Path=CountEmp, Mode=TwoWay}" FontSize="45" FontWeight="Bold" Foreground="#161e29" VerticalAlignment="Center" Margin="15,-25,0,0"/>
+                            <TextBlock Grid.Row="1" Text="{Binding Path=CountEmp, Mode=OneWay}" FontSize="45" FontWeight="Bold" Foreground="#161e29" VerticalAlignment="Center" Margin="15,-25,0,0"/>
                         </Grid>
                         <Border.Effect>
                             <DropShadowEffect BlurRadius="7" Opacity="0.2" />

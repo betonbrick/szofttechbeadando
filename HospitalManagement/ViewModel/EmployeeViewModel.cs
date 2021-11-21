@@ -2,6 +2,7 @@
 using HospitalManagement.ViewModel.Base;
 using System;
 using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace HospitalManagement.ViewModel
 {
@@ -67,7 +68,7 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                // itt eredeiteld VAR van a BOOL helyett
+                // itt eredetileg VAR van a BOOL helyett
                 bool isEmpUpdated = EmployeeService.updateEmployee(CurrEmp);
 
                 if (isEmpUpdated)
