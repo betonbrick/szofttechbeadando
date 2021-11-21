@@ -17,13 +17,35 @@ namespace HospitalManagement.ViewModel
         public RelayCommand UpdateEmp { get; }
         public RelayCommand DeleteEmp { get; }
         public RelayCommand SearchEmp { get; }
-        public RelayCommand CountEmp { get;  }
 
         public RelayCommand SavePat { get; }
         public RelayCommand UpdatePat { get; }
         public RelayCommand DeletePat { get; }
         public RelayCommand SearchPat { get; }
-        public RelayCommand CountPat { get; }
+
+        public int CountEmp
+        {
+            get
+            {
+                return (int)EmployeeService.countAllEmployees();
+            }
+            set
+            {
+                EmployeeService.countAllEmployees();
+            }
+        }
+
+        public int CountPat
+        {
+            get
+            {
+                return (int)EmployeeService.countAllPatients();
+            }
+            set
+            {
+                EmployeeService.countAllEmployees();
+            }
+        }
 
         public string Message { get; set; }
 
@@ -45,13 +67,11 @@ namespace HospitalManagement.ViewModel
             UpdateEmp = new RelayCommand(updateEmp);
             DeleteEmp = new RelayCommand(deleteEmp);
             SearchEmp = new RelayCommand(searchEmp);
-            CountEmp = new RelayCommand(countEmp);
 
             SavePat = new RelayCommand(savePat);
             UpdatePat = new RelayCommand(updatePat);
             DeletePat = new RelayCommand(deletePat);
             SearchPat = new RelayCommand(searchPat);
-            CountPat = new RelayCommand(countPat);
         }
 
         // ÖSSZES EMPLOYEE
@@ -263,19 +283,6 @@ namespace HospitalManagement.ViewModel
                 {
                     Message = "Nincs ilyen beteg.";
                 }
-            }
-            catch (Exception ex)
-            {
-                Message = ex.Message;
-            }
-        }
-
-        // COUNT ALL EMPLOYEE
-        public void countEmp()
-        {
-            try
-            {
-                int countEmp = EmployeeService.countAllEmployees();
             }
             catch (Exception ex)
             {
