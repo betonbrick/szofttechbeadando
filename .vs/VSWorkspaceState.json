@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\HospitalManagement",
+    "\\HospitalManagement\\Model",
+    "\\HospitalManagement\\View"
   ],
-  "SelectedNode": "\\D:\\Szofttech. Beadandó",
+  "SelectedNode": "\\HospitalManagement\\HospitalManagement.sln",
   "PreviewInSolutionExplorer": false
 }

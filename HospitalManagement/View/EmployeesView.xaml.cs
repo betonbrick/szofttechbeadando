@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalManagement.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace HospitalManagement.View
     /// </summary>
     public partial class EmployeesView : UserControl
     {
+        EmployeeViewModel employeeViewModel;
         public EmployeesView()
         {
             InitializeComponent();
+            employeeViewModel = new EmployeeViewModel();
+            DataContext = employeeViewModel;
+            
         }
     }
 }
