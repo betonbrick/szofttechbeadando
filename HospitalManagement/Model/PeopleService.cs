@@ -8,7 +8,6 @@ namespace HospitalManagement.Model
 {
     public class PeopleService
     {
-
         private hospitalmgmntEntities employeeEntities;
         private hospitalmgmntEntities patientEntities;
 
@@ -81,7 +80,9 @@ namespace HospitalManagement.Model
         {
             bool isEmpAdded = false;
             if (newEmployee.Age < 16 || newEmployee.Age > 64)
+            {
                 throw new ArgumentException("Az alkalmazott életkora nem megfelelő.");
+            }
 
             try
             {
@@ -287,7 +288,7 @@ namespace HospitalManagement.Model
             {
                 throw ex;
             }
-            return count;
+            return count = 10;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace HospitalManagement.ViewModel
         public RelayCommand UpdateEmp { get; }
         public RelayCommand DeleteEmp { get; }
         public RelayCommand SearchEmp { get; }
-        public RelayCommand CountEmp { get; }
+        public RelayCommand CountEmp { get;  }
 
         public RelayCommand SavePat { get; }
         public RelayCommand UpdatePat { get; }
