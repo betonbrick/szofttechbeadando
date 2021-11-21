@@ -285,5 +285,16 @@ namespace HospitalManagement.ViewModel
         }
 
         // COUNT ALL PATIENTS - IDE KELL MÉG A FÜGGVÉNY A PATIENT OSZTÁLYBAN
+        public void countPat()
+        {
+            try
+            {
+                int countEmp = EmployeeService.countAllEmployees();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
     }
 }
