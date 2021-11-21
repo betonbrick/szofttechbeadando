@@ -64,7 +64,7 @@
                             <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
                             <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>
                             <DataGridTextColumn Header="Életkor" Width="100" Binding="{Binding Path=Age}"/>
-                            <DataGridTextColumn Header="Telep." Width="200" Binding="{Binding Path=Settlement}"/>
+                            <DataGridTextColumn Header="Település" Width="200" Binding="{Binding Path=Settlement}"/>
                             <DataGridTextColumn Header="Lakcím" Width="200" Binding="{Binding Path=Address}"/>
                             <DataGridTextColumn Header="Email" Width="200" Binding="{Binding Path=Email}"/>
                             <DataGridTextColumn Header="Telefon" Width="*" Binding="{Binding Path=Phone}"/>
