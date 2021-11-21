@@ -98,7 +98,7 @@
     <Compile Include="Model\PeopleService.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
-    <Compile Include="ViewModel\EmployeeViewModel.cs" />
+    <Compile Include="ViewModel\HospitalViewModel.cs" />
     <Compile Include="View\EmployeesView.xaml.cs">
       <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>

@@ -18,11 +18,11 @@ namespace HospitalManagement.View
 {
     public partial class PatientsView : UserControl
     {
-        PatientViewModel patientViewModel;
+        HospitalViewModel patientViewModel;
         public PatientsView()
         {
             InitializeComponent();
-            patientViewModel = new PatientViewModel();
+            patientViewModel = new HospitalViewModel();
             DataContext = patientViewModel;
         }
     }
