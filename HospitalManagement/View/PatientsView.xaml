@@ -81,7 +81,7 @@
                 <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchPat}"/>
                 <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}"/>
                 <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}"/>
-                <Button Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                <Button Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0" Command="{Binding Path=PrintData}"/>
                 <!-- A NYOMTATÁSNAK KELL COMMAND -->
             </Grid>
         </Grid>

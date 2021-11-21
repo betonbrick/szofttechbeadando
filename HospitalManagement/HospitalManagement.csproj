@@ -75,6 +75,7 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\DataPrinting.cs" />
     <Compile Include="Model\EmployeeDTO.cs" />
     <Compile Include="Model\Employees.cs">
       <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>

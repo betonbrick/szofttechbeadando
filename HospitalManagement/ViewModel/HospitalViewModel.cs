@@ -22,6 +22,7 @@ namespace HospitalManagement.ViewModel
         public RelayCommand UpdatePat { get; }
         public RelayCommand DeletePat { get; }
         public RelayCommand SearchPat { get; }
+        public RelayCommand PrintData { get; }
 
         public int CountEmp
         {
@@ -67,11 +68,13 @@ namespace HospitalManagement.ViewModel
             UpdateEmp = new RelayCommand(updateEmp);
             DeleteEmp = new RelayCommand(deleteEmp);
             SearchEmp = new RelayCommand(searchEmp);
+           
 
             SavePat = new RelayCommand(savePat);
             UpdatePat = new RelayCommand(updatePat);
             DeletePat = new RelayCommand(deletePat);
             SearchPat = new RelayCommand(searchPat);
+            PrintData = new RelayCommand(printData);
         }
 
         // ÖSSZES EMPLOYEE
@@ -289,5 +292,14 @@ namespace HospitalManagement.ViewModel
                 Message = ex.Message;
             }
         }
+
+        public void printData() 
+        {
+            DataPrinting dp = new DataPrinting();
+            dp.OnDataGridPrinting();
+        }
+
+        
+        
     }
 }
