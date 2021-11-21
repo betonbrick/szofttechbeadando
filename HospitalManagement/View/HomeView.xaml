@@ -32,7 +32,7 @@
                             <TextBlock Grid.Row="1" Text="{Binding Path=CountEmp, Mode=OneWay}" FontSize="45" FontWeight="Bold" Foreground="#161e29" VerticalAlignment="Center" Margin="15,-25,0,0"/>
                         </Grid>
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="7" Opacity="0.2" />
+                            <DropShadowEffect Color="Black" Opacity="0.2" BlurRadius="20" ShadowDepth="10"/>
                         </Border.Effect>
                     </Border>
                 </Grid>
@@ -49,7 +49,7 @@
                             <TextBlock Grid.Row="1" Text="120" FontSize="45" FontWeight="Bold" Foreground="#161e29" VerticalAlignment="Center" Margin="15,-25,0,0"/>
                         </Grid>
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="7" Opacity="0.2" />
+                            <DropShadowEffect Color="Black" Opacity="0.2" BlurRadius="20" ShadowDepth="10"/>
                         </Border.Effect>
                     </Border>
                 </Grid>
@@ -64,11 +64,13 @@
                 <Grid Grid.Column="0">
                     <TextBlock Text="Alkalmazottak" FontSize="24" FontWeight="SemiBold" Foreground="#161e29" Margin="30,0,0,0"/>
                     <Border Background="White" CornerRadius="12" Margin="30,40,15,30">
-                        <DataGrid x:Name="CustomDataGrid1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                        <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
-                                <DataGridTextColumn Header="Full name" Width="150" Binding="{Binding FullName}"/>
-                                <DataGridTextColumn Header="Neptun code" Width="*" Binding="{Binding NeptunCode}"/>
+                                <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Név" Width="150" Binding="{Binding Path=Name}"/>
+                                <DataGridTextColumn Header="Telefon" Width="100" Binding="{Binding Path=Phone}"/>
+                                <DataGridTextColumn Header="Szakterület" Width="150" Binding="{Binding Path=Speciality}"/>
+                                <DataGridTextColumn Header="Fizetés" Width="*" Binding="{Binding Path=Salary}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <Border.Effect>
@@ -80,11 +82,12 @@
                 <Grid Grid.Column="1">
                     <TextBlock Text="Páciensek" FontSize="24" FontWeight="SemiBold" Foreground="#161e29" Margin="30,0,0,0"/>
                     <Border Background="White" CornerRadius="12" Margin="15,40,30,30">
-                        <DataGrid x:Name="CustomDataGrid2" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Students}">
+                        <DataGrid x:Name="dgvPatients" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Patients, Mode=TwoWay}">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Id" Width="40" Binding="{Binding Id}"/>
-                                <DataGridTextColumn Header="Full name" Width="150" Binding="{Binding FullName}"/>
-                                <DataGridTextColumn Header="Neptun code" Width="*" Binding="{Binding NeptunCode}"/>
+                                <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Név" Width="160" Binding="{Binding Path=Name}"/>
+                                <DataGridTextColumn Header="Lakcím" Width="200" Binding="{Binding Path=Address}"/>
+                                <DataGridTextColumn Header="Telefon" Width="*" Binding="{Binding Path=Phone}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <Border.Effect>
