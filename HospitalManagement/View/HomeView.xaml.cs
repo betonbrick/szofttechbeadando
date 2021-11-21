@@ -18,12 +18,12 @@ namespace HospitalManagement.View
 {
     public partial class HomeView : UserControl
     {
-        EmployeeViewModel employeeViewModel;
+        HospitalViewModel hospitalViewModel;
         public HomeView()
         {
             InitializeComponent();
-            employeeViewModel = new EmployeeViewModel();
-            DataContext = employeeViewModel;
+            hospitalViewModel = new HospitalViewModel();
+            DataContext = hospitalViewModel;
         }
     }
 }

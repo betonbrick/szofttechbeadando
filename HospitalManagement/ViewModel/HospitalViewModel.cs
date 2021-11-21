@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace HospitalManagement.ViewModel
 {
-    public class EmployeeViewModel : BaseViewModel
+    public class HospitalViewModel : BaseViewModel
     {
         public ObservableCollection<EmployeeDTO> Employees { get; set; }
         public ObservableCollection<PatientDTO> Patients { get; set; }
@@ -31,7 +31,7 @@ namespace HospitalManagement.ViewModel
         private PeopleService EmployeeService;
         private PeopleService PatientService;
 
-        public EmployeeViewModel()
+        public HospitalViewModel()
         {
             EmployeeService = new PeopleService();
             PatientService = new PeopleService();
