@@ -23,7 +23,6 @@ D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\HomeView.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\PatientsView.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\DataGridStyle.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\InteractionButtonsStyle.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
 D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.dll
 D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.SqlServer.dll
 D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.xml
@@ -31,3 +30,4 @@ D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.SqlServer.x
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_Content.g.cs
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.CopyLocal.cache
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache

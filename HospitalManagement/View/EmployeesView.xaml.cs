@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace HospitalManagement.View
 {
-    /// <summary>
-    /// Interaction logic for EmployeesView.xaml
-    /// </summary>
     public partial class EmployeesView : UserControl
     {
         public EmployeesView()

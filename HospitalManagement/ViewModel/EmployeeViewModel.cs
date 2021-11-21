@@ -10,10 +10,10 @@ namespace HospitalManagement.ViewModel
         public ObservableCollection<EmployeeDTO> Employees { get; set; }
         public EmployeeDTO CurrEmp { get; set; }
 
-        public RelayCommand SaveEmp { get; set; }
-        public RelayCommand UpdateEmp { get; set; }
-        public RelayCommand DeleteEmp { get; set; }
-        public RelayCommand SearchEmp { get; set; }
+        public RelayCommand SaveEmp { get; }
+        public RelayCommand UpdateEmp { get; }
+        public RelayCommand DeleteEmp { get; }
+        public RelayCommand SearchEmp { get; }
 
         public string Message { get; set; }
 
@@ -128,8 +128,20 @@ namespace HospitalManagement.ViewModel
                 }
                 else
                 {
-                    Message = "Ilyen alkalmazott nincs.";
+                    Message = "Nincs ilyen alkalmazott.";
                 }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
+
+        public void countEmp()
+        {
+            try
+            {
+                EmployeeDTO countEmp = EmployeeService.countAllEmployees();
             }
             catch (Exception ex)
             {
