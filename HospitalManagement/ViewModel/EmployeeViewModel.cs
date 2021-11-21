@@ -9,7 +9,10 @@ namespace HospitalManagement.ViewModel
     public class EmployeeViewModel : BaseViewModel
     {
         public ObservableCollection<EmployeeDTO> Employees { get; set; }
+        public ObservableCollection<PatientDTO> Patients { get; set; }
+
         public EmployeeDTO CurrEmp { get; set; }
+        public PatientDTO CurrPat { get; set; }
 
         public RelayCommand SaveEmp { get; }
         public RelayCommand UpdateEmp { get; }
@@ -17,30 +20,54 @@ namespace HospitalManagement.ViewModel
         public RelayCommand SearchEmp { get; }
         public RelayCommand CountEmp { get; }
 
+        public RelayCommand SavePat { get; }
+        public RelayCommand UpdatePat { get; }
+        public RelayCommand DeletePat { get; }
+        public RelayCommand SearchPat { get; }
+        public RelayCommand CountPat { get; }
+
         public string Message { get; set; }
 
         private PeopleService EmployeeService;
+        private PeopleService PatientService;
 
         public EmployeeViewModel()
         {
             EmployeeService = new PeopleService();
+            PatientService = new PeopleService();
 
             loadAllEmployees();
+            loadAllPatients();
 
             CurrEmp = new EmployeeDTO();
+            CurrPat = new PatientDTO();
 
             SaveEmp = new RelayCommand(saveEmp);
             UpdateEmp = new RelayCommand(updateEmp);
             DeleteEmp = new RelayCommand(deleteEmp);
             SearchEmp = new RelayCommand(searchEmp);
             CountEmp = new RelayCommand(countEmp);
+
+            SavePat = new RelayCommand(savePat);
+            UpdatePat = new RelayCommand(updatePat);
+            DeletePat = new RelayCommand(deletePat);
+            SearchPat = new RelayCommand(searchPat);
+            CountPat = new RelayCommand(countPat);
         }
 
+        // ÖSSZES EMPLOYEE
         public void loadAllEmployees()
         {
             Employees = new ObservableCollection<EmployeeDTO>(EmployeeService.getAllEmployees());
         }
 
+        // ÖSSZES PATIENT
+        public void loadAllPatients()
+        {
+            Patients = new ObservableCollection<PatientDTO>(PatientService.getAllPatients());
+        }
+
+        // SAVE EMPLOYEE
         public void saveEmp()
         {
             try
@@ -64,6 +91,31 @@ namespace HospitalManagement.ViewModel
             }
         }
 
+        // SAVE PATIENT
+        public void savePat()
+        {
+            try
+            {
+                bool isPatSaved = PatientService.addPatient(CurrPat);
+
+                loadAllPatients();
+
+                if (isPatSaved)
+                {
+                    Message = "Sikeres mentés!";
+                }
+                else
+                {
+                    Message = "Sikertelen mentés.";
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
+
+        // UPDATE EMPLOYEE
         public void updateEmp()
         {
             try
@@ -88,6 +140,32 @@ namespace HospitalManagement.ViewModel
             }
         }
 
+        // UPDATE PATIENT
+        public void updatePat()
+        {
+            try
+            {
+                // itt eredeiteld VAR van a BOOL helyett
+                bool isPatUpdated = PatientService.updatePatient(CurrPat);
+
+                if (isPatUpdated)
+                {
+                    Message = "Sikeres módosítás!";
+
+                    loadAllPatients();
+                }
+                else
+                {
+                    Message = "Sikertelen módosítás.";
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
+
+        // DELETE EMPLOYEE
         public void deleteEmp()
         {
             try
@@ -111,6 +189,31 @@ namespace HospitalManagement.ViewModel
             }
         }
 
+        // DELETE PATIENT
+        public void deletePat()
+        {
+            try
+            {
+                bool isPatDeleted = PatientService.deletePatient(CurrPat.Id);
+
+                if (isPatDeleted)
+                {
+                    Message = "Sikeres törlés!";
+
+                    loadAllPatients();
+                }
+                else
+                {
+                    Message = "Sikertelen törlés.";
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
+
+        // SEARCH EMPLOYEE
         public void searchEmp()
         {
             try
@@ -140,6 +243,35 @@ namespace HospitalManagement.ViewModel
             }
         }
 
+        // SEARCH PATIENT
+        public void searchPat()
+        {
+            try
+            {
+                PatientDTO patient = PatientService.searchPatient(CurrPat.Id);
+
+                if (patient != null)
+                {
+                    CurrPat.Id = patient.Id;
+                    CurrPat.Name = patient.Name;
+                    CurrPat.Age = patient.Age;
+                    CurrPat.Settlement = patient.Settlement;
+                    CurrPat.Address = patient.Address;
+                    CurrPat.Email = patient.Email;
+                    CurrPat.Phone = patient.Phone;
+                }
+                else
+                {
+                    Message = "Nincs ilyen beteg.";
+                }
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
+
+        // COUNT ALL EMPLOYEE
         public void countEmp()
         {
             try
@@ -151,5 +283,7 @@ namespace HospitalManagement.ViewModel
                 Message = ex.Message;
             }
         }
+
+        // COUNT ALL PATIENTS - IDE KELL MÉG A FÜGGVÉNY A PATIENT OSZTÁLYBAN
     }
 }
