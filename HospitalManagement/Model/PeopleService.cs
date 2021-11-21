@@ -276,19 +276,42 @@ namespace HospitalManagement.Model
             return patientDTO;
         }
 
-        // ÖSSZES EMPLOYEE SZÁMA xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        // EMPLOYEE MEGSZÁMLÁLÁSA
         public int countAllEmployees()
         {
-            int count;
+            int count = 0;
             try
             {
-                count = (from employee in employeeEntities.Employees where employee.Id == '1' from emp in employee.Name select emp).Count();
+                var employees = from employee in employeeEntities.Employees select employee;
+                foreach (var employee in employees)
+                {
+                    count++;
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return count = 10;
+            return count;
+        }
+
+        // PATIENT MEGSZÁMLÁLÁSA
+        public int countAllPatients()
+        {
+            int count = 0;
+            try
+            {
+                var patients = from patient in patientEntities.Patients select patient;
+                foreach (var employee in patients)
+                {
+                    count++;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return count;
         }
     }
 }
