@@ -128,7 +128,7 @@ namespace HospitalManagement.ViewModel
                 }
                 else
                 {
-                    Message = "Ilyen alkalmazott nincs.";
+                    Message = "Nincs ilyen alkalmazott.";
                 }
             }
             catch (Exception ex)
