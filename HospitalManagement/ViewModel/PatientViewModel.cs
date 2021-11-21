@@ -7,7 +7,6 @@ namespace HospitalManagement.ViewModel
 {
     public class PatientViewModel : BaseViewModel
     {
-
         public ObservableCollection<PatientDTO> Patients { get; set; }
         public PatientDTO CurrPat { get; set; }
 
