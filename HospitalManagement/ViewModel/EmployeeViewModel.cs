@@ -136,5 +136,17 @@ namespace HospitalManagement.ViewModel
                 Message = ex.Message;
             }
         }
+
+        public void countEmp()
+        {
+            try
+            {
+                EmployeeDTO countEmp = EmployeeService.countAllEmployees();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+        }
     }
 }
