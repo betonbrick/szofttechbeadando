@@ -2,7 +2,6 @@
 using HospitalManagement.ViewModel.Base;
 using System;
 using System.Collections.ObjectModel;
-using System.Threading;
 
 namespace HospitalManagement.ViewModel
 {

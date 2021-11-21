@@ -100,9 +100,9 @@ namespace HospitalManagement.Model
                 var numberOfRowsAffected = employeeEntities.SaveChanges();
                 isEmpAdded = numberOfRowsAffected > 0;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw new ArgumentException("Van már ilyen azonosító a listában.");
             }
             return isEmpAdded;
         }
@@ -126,9 +126,9 @@ namespace HospitalManagement.Model
                 var numberOfRowsAffected = patientEntities.SaveChanges();
                 isPatAdded = numberOfRowsAffected > 0;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw new ArgumentException("Van már ilyen azonosító a listában.");
             }
             return isPatAdded;
         }
