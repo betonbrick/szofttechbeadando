@@ -246,16 +246,16 @@
                     <!--EGÉR MŰVELET-->
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="BtnBorder" Property="Background">
+                            <Setter TargetName="BtnBorder" Property="BorderBrush">
                                 <Setter.Value>
                                     <SolidColorBrush Color="#c74444"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="BtnBorder" Property="Background">
+                            <Setter TargetName="BtnBorder" Property="BorderBrush">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="#c21d2d"/>
+                                    <SolidColorBrush Color="#cc6d1b"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
