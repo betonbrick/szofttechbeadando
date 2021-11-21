@@ -53,7 +53,7 @@
 
                 <Grid Grid.Row="3">
                     <TextBlock x:Name="messageBlock" Width="500" FontSize="20" FontWeight="SemiBold" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Text="{Binding Path=Message}"/>
-                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SavePat}"/>
+                    <Button x:Name="btnAddPat" Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SavePat}"/>
                 </Grid>
             </Grid>
 
@@ -78,10 +78,10 @@
             
             <Grid Grid.Row="3">
                 <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0"/>
-                <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchPat}"/>
-                <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}"/>
-                <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}"/>
-                <Button Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                <Button x:Name="btnSearchPat" Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchPat}"/>
+                <Button x:Name="btnDeletePat" Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}"/>
+                <Button x:Name="btnUpdatePat" Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}"/>
+                <Button x:Name="btnPrintPat" Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                 <!-- A NYOMTATÁSNAK KELL COMMAND -->
             </Grid>
         </Grid>
