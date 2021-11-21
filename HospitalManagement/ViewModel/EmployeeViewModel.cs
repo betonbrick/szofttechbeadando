@@ -14,6 +14,7 @@ namespace HospitalManagement.ViewModel
         public RelayCommand UpdateEmp { get; }
         public RelayCommand DeleteEmp { get; }
         public RelayCommand SearchEmp { get; }
+        public RelayCommand CountEmp { get; }
 
         public string Message { get; set; }
 
@@ -31,6 +32,7 @@ namespace HospitalManagement.ViewModel
             UpdateEmp = new RelayCommand(updateEmp);
             DeleteEmp = new RelayCommand(deleteEmp);
             SearchEmp = new RelayCommand(searchEmp);
+            CountEmp = new RelayCommand(countEmp);
         }
 
         public void loadAllEmployees()
@@ -141,7 +143,7 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                EmployeeDTO countEmp = EmployeeService.countAllEmployees();
+                int countEmp = EmployeeService.countAllEmployees();
             }
             catch (Exception ex)
             {
