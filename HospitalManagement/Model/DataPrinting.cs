@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,19 +10,18 @@ namespace HospitalManagement.ViewModel
     public class DataPrinting
     {
         PatientsView patientsView = new PatientsView();
-        public void OnDataGridPrinting( )
+        public void OnDataGridPrinting()
         {
             string title = "Lista";
-            PrintDialog Printdlg = new PrintDialog();
-            if ((bool)Printdlg.ShowDialog().GetValueOrDefault())
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog()==true)
             {
-               
-
-                Size pageSize = new Size(Printdlg.PrintableAreaWidth, Printdlg.PrintableAreaHeight);
+                Size pageSize = new Size(3508, 2480);
 
                 patientsView.dgvPatients.Measure(pageSize);
 
-                Printdlg.PrintVisual(patientsView.dgvPatients, title);
+              printDialog.PrintTicket.PageOrientation = PageOrientation.Landscape;
+              printDialog.PrintVisual(patientsView.dgvPatients, title);
             }
         }
 
