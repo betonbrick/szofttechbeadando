@@ -95,6 +95,7 @@ namespace HospitalManagement.Model
                     employee.Id = newEmployee.Id;
                     employee.Name = newEmployee.Name;
                     employee.Age = newEmployee.Age;
+                    //employee.Occupation = newEmployee.Occupation; + hozzáadni
                     employee.Settlement = newEmployee.Settlement;
                     employee.Address = newEmployee.Address;
                     employee.Email = newEmployee.Email;
@@ -130,7 +131,7 @@ namespace HospitalManagement.Model
                     patient.Id = newPatient.Id;
                     patient.Name = newPatient.Name;
                     patient.Age = newPatient.Age;
-                    patient.Settlement = newPatient.Settlement;
+                    patient.Settlement = newPatient.Settlement; //patient.Occupation = newPatient.Class; - Leváltani
                     patient.Address = newPatient.Address;
                     patient.Email = newPatient.Email;
                     patient.Phone = newPatient.Phone;
