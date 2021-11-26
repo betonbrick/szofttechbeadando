@@ -32,9 +32,9 @@
 
                 <Grid Grid.Row="0">
                     <TextBlock Text="Beosztás" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <RadioButton x:Name="rbDoctor" Content="Doktor" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0"/>
-                    <RadioButton x:Name="rbNurse" Content="Nővér" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="280,0,0,0"/>
-                    <RadioButton x:Name="rbPartTime" Content="Részmunkaidős" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="390,0,0,0"/>
+                    <TextBlock Text="Doktor" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0"/>
+                    <CheckBox x:Name="chckBxOccupation" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="235,0,0,0" Style="{StaticResource SwitchButtonStyle}"/>
+                    <TextBlock Text="Nővér" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0"/>
                 </Grid>
 
                 <Grid Grid.Row="1">
@@ -80,7 +80,7 @@
                             <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
                             <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>
                             <DataGridTextColumn Header="Életkor" Width="60" Binding="{Binding Path=Age}"/>
-                            <DataGridTextColumn Header="Település" Width="200" Binding="{Binding Path=Settlement}"/>
+                            <DataGridTextColumn Header="Beosztás" Width="200" Binding="{Binding Path=Occupation}"/>
                             <DataGridTextColumn Header="Lakcím" Width="180" Binding="{Binding Path=Address}"/>
                             <DataGridTextColumn Header="Email" Width="150" Binding="{Binding Path=Email}"/>
                             <DataGridTextColumn Header="Telefon" Width="120" Binding="{Binding Path=Phone}"/>

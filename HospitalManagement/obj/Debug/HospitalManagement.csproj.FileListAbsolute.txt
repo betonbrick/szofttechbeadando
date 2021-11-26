@@ -102,3 +102,4 @@ D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.g.cs
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\SwitchButtonStyle.baml
