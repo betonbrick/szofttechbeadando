@@ -79,59 +79,72 @@ namespace HospitalManagement.Model
         public bool addEmployee(EmployeeDTO newEmployee)
         {
             bool isEmpAdded = false;
-            if (newEmployee.Age < 16 || newEmployee.Age > 64)
+            if (newEmployee.Id == 0)
+            {
+                throw new ArgumentException("Az azonosító nem lehet 0.");
+            }
+            else if (newEmployee.Age < 16 || newEmployee.Age > 64)
             {
                 throw new ArgumentException("Az alkalmazott életkora nem megfelelő.");
             }
-
-            try
+            else
             {
-                var employee = new Employees();
-                employee.Id = newEmployee.Id;
-                employee.Name = newEmployee.Name;
-                employee.Age = newEmployee.Age;
-                employee.Settlement = newEmployee.Settlement;
-                employee.Address = newEmployee.Address;
-                employee.Email = newEmployee.Email;
-                employee.Phone = newEmployee.Phone;
-                employee.Speciality = newEmployee.Speciality;
-                employee.Salary = newEmployee.Salary;
+                try
+                {
+                    var employee = new Employees();
+                    employee.Id = newEmployee.Id;
+                    employee.Name = newEmployee.Name;
+                    employee.Age = newEmployee.Age;
+                    employee.Settlement = newEmployee.Settlement;
+                    employee.Address = newEmployee.Address;
+                    employee.Email = newEmployee.Email;
+                    employee.Phone = newEmployee.Phone;
+                    employee.Speciality = newEmployee.Speciality;
+                    employee.Salary = newEmployee.Salary;
 
-                employeeEntities.Employees.Add(employee);
-                var numberOfRowsAffected = employeeEntities.SaveChanges();
-                isEmpAdded = numberOfRowsAffected > 0;
+                    employeeEntities.Employees.Add(employee);
+                    var numberOfRowsAffected = employeeEntities.SaveChanges();
+                    isEmpAdded = numberOfRowsAffected > 0;
+                }
+                catch (Exception)
+                {
+                    throw new ArgumentException("Van már ilyen azonosító a listában.");
+                }
+                return isEmpAdded;
             }
-            catch (Exception)
-            {
-                throw new ArgumentException("Van már ilyen azonosító a listában.");
-            }
-            return isEmpAdded;
         }
 
         // PATIENT HOZZÁADÁSA
         public bool addPatient(PatientDTO newPatient)
         {
             bool isPatAdded = false;
-            try
+            if (newPatient.Id == 0)
             {
-                var patient = new Patients();
-                patient.Id = newPatient.Id;
-                patient.Name = newPatient.Name;
-                patient.Age = newPatient.Age;
-                patient.Settlement = newPatient.Settlement;
-                patient.Address = newPatient.Address;
-                patient.Email = newPatient.Email;
-                patient.Phone = newPatient.Phone;
+                throw new ArgumentException("Az azonosító nem lehet 0.");
+            }
+            else
+            {
+                try
+                {
+                    var patient = new Patients();
+                    patient.Id = newPatient.Id;
+                    patient.Name = newPatient.Name;
+                    patient.Age = newPatient.Age;
+                    patient.Settlement = newPatient.Settlement;
+                    patient.Address = newPatient.Address;
+                    patient.Email = newPatient.Email;
+                    patient.Phone = newPatient.Phone;
 
-                patientEntities.Patients.Add(patient);
-                var numberOfRowsAffected = patientEntities.SaveChanges();
-                isPatAdded = numberOfRowsAffected > 0;
+                    patientEntities.Patients.Add(patient);
+                    var numberOfRowsAffected = patientEntities.SaveChanges();
+                    isPatAdded = numberOfRowsAffected > 0;
+                }
+                catch (Exception)
+                {
+                    throw new ArgumentException("Van már ilyen azonosító a listában.");
+                }
+                return isPatAdded;
             }
-            catch (Exception)
-            {
-                throw new ArgumentException("Van már ilyen azonosító a listában.");
-            }
-            return isPatAdded;
         }
 
         // EMPLOYEE FRISSÍTÉSE

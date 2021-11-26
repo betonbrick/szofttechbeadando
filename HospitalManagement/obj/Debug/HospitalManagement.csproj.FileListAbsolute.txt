@@ -100,3 +100,5 @@ D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.Gener
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.CoreCompileInputs.cache
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.CopyLocal.cache
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.baml
