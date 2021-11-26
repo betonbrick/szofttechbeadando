@@ -76,7 +76,7 @@ namespace HospitalManagement.Model
         }
 
         // EMPLOYEE HOZZÁADÁSA
-        public bool addEmployee(EmployeeDTO newEmployee)
+        public bool addEmployee(EmployeeDTO newEmployee, bool isChecked)
         {
             bool isEmpAdded = false;
             if (newEmployee.Id == 0)
@@ -95,7 +95,14 @@ namespace HospitalManagement.Model
                     employee.Id = newEmployee.Id;
                     employee.Name = newEmployee.Name;
                     employee.Age = newEmployee.Age;
-                    employee.Occupation = newEmployee.Occupation;
+                    if (isChecked)
+                    {
+                        employee.Occupation = "Nővér";
+                    }
+                    else
+                    {
+                        employee.Occupation = "Orvos";
+                    }
                     employee.Address = newEmployee.Address;
                     employee.Email = newEmployee.Email;
                     employee.Phone = newEmployee.Phone;

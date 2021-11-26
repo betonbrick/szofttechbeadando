@@ -33,12 +33,12 @@
                 <Grid Grid.Row="0">
                     <TextBlock Text="Beosztás" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                     <TextBlock Text="Doktor" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0"/>
-                    <CheckBox x:Name="chckBxOccupation" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="235,0,0,0" Style="{StaticResource SwitchButtonStyle}"/>
+                    <CheckBox x:Name="chckBxOccupation" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="235,0,0,0" Style="{StaticResource SwitchButtonStyle}" IsChecked="{Binding Path=Occupation, Mode=TwoWay}"/>
                     <TextBlock Text="Nővér" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0"/>
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <TextBlock Text="Azon." FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBlock Text="Azonosító" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                     <TextBox x:Name="txtId" FontSize="22" Width="50" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Id, Mode=TwoWay}"/>
                     <TextBlock Text="Teljes név" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="280,0,0,0"/>
                     <TextBox x:Name="txtName" FontSize="22" Width="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="400,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Name, Mode=TwoWay}"/>
@@ -47,10 +47,8 @@
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <TextBlock Text="Település" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtSettlement" FontSize="22" Width="220" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Settlement, Mode=TwoWay}"/>
-                    <TextBlock Text="Lakcím" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="440,0,0,0"/>
-                    <TextBox x:Name="txtAddress" FontSize="22" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Address, Mode=TwoWay}"/>
+                    <TextBlock Text="Lakcím" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtAddress" FontSize="22" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Address, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="3">

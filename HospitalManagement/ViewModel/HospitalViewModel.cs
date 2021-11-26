@@ -24,6 +24,8 @@ namespace HospitalManagement.ViewModel
         public RelayCommand SearchPat { get; }
         public RelayCommand PrintData { get; }
 
+        public bool Occupation { get; set; }
+
         public int CountEmp
         {
             get
@@ -94,7 +96,16 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                bool isEmpSaved = EmployeeService.addEmployee(CurrEmp);
+                bool isEmpSaved = false;
+
+                if (Occupation)
+                {
+                    isEmpSaved = EmployeeService.addEmployee(CurrEmp, Occupation);
+                }
+                else
+                {
+                    isEmpSaved = EmployeeService.addEmployee(CurrEmp, Occupation);
+                }
 
                 loadAllEmployees();
 
@@ -142,7 +153,6 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                // itt eredetileg VAR van a BOOL helyett
                 bool isEmpUpdated = EmployeeService.updateEmployee(CurrEmp);
 
                 if (isEmpUpdated)
@@ -167,7 +177,6 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                // itt eredeiteld VAR van a BOOL helyett
                 bool isPatUpdated = PatientService.updatePatient(CurrPat);
 
                 if (isPatUpdated)
@@ -298,8 +307,5 @@ namespace HospitalManagement.ViewModel
             DataPrinting dp = new DataPrinting();
             dp.OnDataGridPrinting();
         }
-
-        
-        
     }
 }
