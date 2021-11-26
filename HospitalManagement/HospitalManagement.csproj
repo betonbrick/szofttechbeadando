@@ -79,26 +79,26 @@
     <Compile Include="Model\DataPrinting.cs" />
     <Compile Include="Model\EmployeeDTO.cs" />
     <Compile Include="Model\Employees.cs">
-      <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
+      <DependentUpon>HospitalDbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\HospitalMgmntDbModel.Context.cs">
+    <Compile Include="Model\HospitalDbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalMgmntDbModel.Context.tt</DependentUpon>
+      <DependentUpon>HospitalDbModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\HospitalMgmntDbModel.cs">
+    <Compile Include="Model\HospitalDbModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
+      <DependentUpon>HospitalDbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\HospitalMgmntDbModel.Designer.cs">
+    <Compile Include="Model\HospitalDbModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
+      <DependentUpon>HospitalDbModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\PatientDTO.cs" />
     <Compile Include="Model\Patients.cs">
-      <DependentUpon>HospitalMgmntDbModel.tt</DependentUpon>
+      <DependentUpon>HospitalDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PeopleService.cs" />
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
@@ -176,12 +176,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\HospitalMgmntDbModel.edmx">
+    <EntityDeploy Include="Model\HospitalDbModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HospitalMgmntDbModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>HospitalDbModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\HospitalMgmntDbModel.edmx.diagram">
-      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
+    <None Include="Model\HospitalDbModel.edmx.diagram">
+      <DependentUpon>HospitalDbModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,22 +194,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\login.png" />
-    <Content Include="Model\HospitalMgmntDbModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
-      <LastGenOutput>HospitalMgmntDbModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\HospitalMgmntDbModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HospitalMgmntDbModel.edmx</DependentUpon>
-      <LastGenOutput>HospitalMgmntDbModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\search.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\HospitalDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalDbModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\HospitalDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalDbModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalDbModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.6.5.1\build\Fody.targets" Condition="Exists('packages\Fody.6.5.1\build\Fody.targets')" />

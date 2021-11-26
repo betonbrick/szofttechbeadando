@@ -247,7 +247,7 @@ namespace HospitalManagement.ViewModel
                     CurrEmp.Id = employee.Id;
                     CurrEmp.Name = employee.Name;
                     CurrEmp.Age = employee.Age;
-                    CurrEmp.Settlement = employee.Settlement;
+                    CurrEmp.Occupation = employee.Occupation;
                     CurrEmp.Address = employee.Address;
                     CurrEmp.Email = employee.Email;
                     CurrEmp.Phone = employee.Phone;
@@ -277,7 +277,7 @@ namespace HospitalManagement.ViewModel
                     CurrPat.Id = patient.Id;
                     CurrPat.Name = patient.Name;
                     CurrPat.Age = patient.Age;
-                    CurrPat.Settlement = patient.Settlement;
+                    CurrPat.Class = patient.Class;
                     CurrPat.Address = patient.Address;
                     CurrPat.Email = patient.Email;
                     CurrPat.Phone = patient.Phone;

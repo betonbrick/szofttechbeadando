@@ -8,13 +8,13 @@ namespace HospitalManagement.Model
 {
     public class PeopleService
     {
-        private hospitalmgmntEntities employeeEntities;
-        private hospitalmgmntEntities patientEntities;
+        private HospitalEntities employeeEntities;
+        private HospitalEntities patientEntities;
 
         public PeopleService()
         {
-            employeeEntities = new hospitalmgmntEntities();
-            patientEntities = new hospitalmgmntEntities();
+            employeeEntities = new HospitalEntities();
+            patientEntities = new HospitalEntities();
         }
 
         // EMPLOYEE TÁBLA ÖSSZES ELEME
@@ -31,7 +31,7 @@ namespace HospitalManagement.Model
                         Id = employee.Id,
                         Name = employee.Name,
                         Age = employee.Age,
-                        Settlement = employee.Settlement,
+                        Occupation = employee.Occupation,
                         Address = employee.Address,
                         Email = employee.Email,
                         Phone = employee.Phone,
@@ -61,7 +61,7 @@ namespace HospitalManagement.Model
                         Id = patient.Id,
                         Name = patient.Name,
                         Age = patient.Age,
-                        Settlement = patient.Settlement,
+                        Class = patient.Class,
                         Address = patient.Address,
                         Email = patient.Email,
                         Phone = patient.Phone
@@ -95,8 +95,7 @@ namespace HospitalManagement.Model
                     employee.Id = newEmployee.Id;
                     employee.Name = newEmployee.Name;
                     employee.Age = newEmployee.Age;
-                    //employee.Occupation = newEmployee.Occupation; + hozzáadni
-                    employee.Settlement = newEmployee.Settlement;
+                    employee.Occupation = newEmployee.Occupation;
                     employee.Address = newEmployee.Address;
                     employee.Email = newEmployee.Email;
                     employee.Phone = newEmployee.Phone;
@@ -131,7 +130,7 @@ namespace HospitalManagement.Model
                     patient.Id = newPatient.Id;
                     patient.Name = newPatient.Name;
                     patient.Age = newPatient.Age;
-                    patient.Settlement = newPatient.Settlement; //patient.Occupation = newPatient.Class; - Leváltani
+                    patient.Class = newPatient.Class;
                     patient.Address = newPatient.Address;
                     patient.Email = newPatient.Email;
                     patient.Phone = newPatient.Phone;
@@ -157,7 +156,7 @@ namespace HospitalManagement.Model
                 var employee = employeeEntities.Employees.Find(employeeUpdate.Id);
                 employee.Name = employeeUpdate.Name;
                 employee.Age = employeeUpdate.Age;
-                employee.Settlement = employeeUpdate.Settlement;
+                employee.Occupation = employeeUpdate.Occupation;
                 employee.Address = employeeUpdate.Address;
                 employee.Email = employeeUpdate.Email;
                 employee.Phone = employeeUpdate.Phone;
@@ -182,7 +181,7 @@ namespace HospitalManagement.Model
                 var patient = patientEntities.Patients.Find(patientUpdate.Id);
                 patient.Name = patientUpdate.Name;
                 patient.Age = patientUpdate.Age;
-                patient.Settlement = patientUpdate.Settlement;
+                patient.Class = patientUpdate.Class;
                 patient.Address = patientUpdate.Address;
                 patient.Email = patientUpdate.Email;
                 patient.Phone = patientUpdate.Phone;
@@ -246,7 +245,7 @@ namespace HospitalManagement.Model
                         Id = employee.Id,
                         Name = employee.Name,
                         Age = employee.Age,
-                        Settlement = employee.Settlement,
+                        Occupation = employee.Occupation,
                         Address = employee.Address,
                         Email = employee.Email,
                         Phone = employee.Phone,
@@ -276,7 +275,7 @@ namespace HospitalManagement.Model
                         Id = patient.Id,
                         Name = patient.Name,
                         Age = patient.Age,
-                        Settlement = patient.Settlement,
+                        Class = patient.Class,
                         Address = patient.Address,
                         Email = patient.Email,
                         Phone = patient.Phone

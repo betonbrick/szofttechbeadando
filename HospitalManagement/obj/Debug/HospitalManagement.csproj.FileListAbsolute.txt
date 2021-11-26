@@ -30,7 +30,6 @@ D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.F
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.exe
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.pdb
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
 D:\Szofftech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe.config
 D:\Szofftech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe
 D:\Szofftech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.pdb
