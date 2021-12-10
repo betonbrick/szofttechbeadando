@@ -22,6 +22,7 @@ namespace HospitalManagement.ViewModel
         public RelayCommand UpdatePat { get; }
         public RelayCommand DeletePat { get; }
         public RelayCommand SearchPat { get; }
+
         public RelayCommand PrintData { get; }
 
         public bool Occupation { get; set; }

@@ -38,8 +38,8 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <TextBlock Text="Település" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtSettlement" FontSize="22" Width="220" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Settlement, Mode=TwoWay}"/>
+                    <TextBlock Text="Osztály" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
+                    <TextBox x:Name="txtClass" FontSize="22" Width="220" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Class, Mode=TwoWay}"/>
                     <TextBlock Text="Lakcím" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="440,0,0,0"/>
                     <TextBox x:Name="txtAddress" FontSize="22" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Address, Mode=TwoWay}"/>
                 </Grid>
@@ -52,8 +52,8 @@
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <TextBlock x:Name="messageBlock" Width="500" FontSize="20" FontWeight="SemiBold" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Text="{Binding Path=Message}"/>
-                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SavePat}"/>
+                    <TextBlock x:Name="messageBlock" Width="1100" FontSize="20" FontWeight="SemiBold" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Text="{Binding Path=Message}"/>
+                    <Button Content="Hozzáadás" Style="{StaticResource AddBtnStyle}" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=SavePat}" Click="Button_Click"/>
                 </Grid>
             </Grid>
 
@@ -77,10 +77,10 @@
             </Grid>
             
             <Grid Grid.Row="3">
-                <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Id, Mode=TwoWay}"/>
+                <TextBox x:Name="txtSearch" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="300,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Id, Mode=TwoWay}"/>
                 <Button Style="{StaticResource SearchBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="480,0,0,0" Command="{Binding Path=SearchPat}"/>
-                <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}"/>
-                <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}"/>
+                <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}" Click="Button_Click_2"/>
+                <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}" Click="Button_Click_1"/>
                 <Button Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0" Command="{Binding Path=PrintData}"/>
                 <!-- A NYOMTATÁSNAK KELL COMMAND -->
             </Grid>

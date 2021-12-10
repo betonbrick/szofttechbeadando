@@ -118,6 +118,7 @@ namespace HospitalManagement.Model
                 {
                     throw new ArgumentException("Van már ilyen azonosító a listában.");
                 }
+
                 return isEmpAdded;
             }
         }
@@ -152,6 +153,7 @@ namespace HospitalManagement.Model
                 {
                     throw new ArgumentException("Van már ilyen azonosító a listában.");
                 }
+
                 return isPatAdded;
             }
         }
@@ -178,6 +180,7 @@ namespace HospitalManagement.Model
                     employee.Phone = employeeUpdate.Phone;
                     employee.Speciality = employeeUpdate.Speciality;
                     employee.Salary = employeeUpdate.Salary;
+
                     var numberOfRowsAffected = employeeEntities.SaveChanges();
                     isEmpUpdated = numberOfRowsAffected > 0;
                 }
@@ -210,6 +213,7 @@ namespace HospitalManagement.Model
                     patient.Address = patientUpdate.Address;
                     patient.Email = patientUpdate.Email;
                     patient.Phone = patientUpdate.Phone;
+
                     var numberOfRowsAffected = patientEntities.SaveChanges();
                     isPatUpdated = numberOfRowsAffected > 0;
                 }
