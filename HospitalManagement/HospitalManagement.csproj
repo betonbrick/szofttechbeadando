@@ -85,6 +85,7 @@
     <Compile Include="Model\Employees.cs">
       <DependentUpon>HospitalDbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Hashing.cs" />
     <Compile Include="Model\HospitalDbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

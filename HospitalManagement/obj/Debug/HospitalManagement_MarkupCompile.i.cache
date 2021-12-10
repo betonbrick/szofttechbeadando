@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\
+D:\szoftechbeadando\HospitalManagement\obj\Debug\
 HospitalManagement
 none
 false
 DEBUG;TRACE
-D:\Szofttech. Beadandó\HospitalManagement\App.xaml
-91073964419
-2-1666467474
-24-519185018
-20-906378220
+D:\szoftechbeadando\HospitalManagement\App.xaml
+9110119520
+2137487733
+25475179268
+20-471432379
 LoginWindow.xaml;MainWindow.xaml;Resources\DataGridStyle.xaml;Resources\InteractionButtonsStyle.xaml;Resources\MenuButtonStyle.xaml;Resources\SwitchButtonStyle.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\PatientsView.xaml;
 
 True

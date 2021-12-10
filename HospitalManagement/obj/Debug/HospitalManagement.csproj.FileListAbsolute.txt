@@ -103,3 +103,5 @@ D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.g.cs
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\SwitchButtonStyle.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
+D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.SuggestedBindingRedirects.cache
+D:\szoftechbeadando\HospitalManagement\obj\Debug\Resources\SwitchButtonStyle.baml

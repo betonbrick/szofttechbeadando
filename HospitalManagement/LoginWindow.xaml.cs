@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalManagement.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,13 @@ namespace HospitalManagement
             {
                 DragMove();
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Hashing hash = new Hashing();
+
+            MessageBox.Show(hash.createMD5Hash(txtPassword.Password));
         }
     }
 }
