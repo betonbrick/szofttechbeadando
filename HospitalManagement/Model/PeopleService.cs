@@ -79,6 +79,7 @@ namespace HospitalManagement.Model
         public bool addEmployee(EmployeeDTO newEmployee, bool isChecked)
         {
             bool isEmpAdded = false;
+
             if (newEmployee.Id == 0)
             {
                 throw new ArgumentException("Az azonosító nem lehet 0.");
@@ -125,6 +126,7 @@ namespace HospitalManagement.Model
         public bool addPatient(PatientDTO newPatient)
         {
             bool isPatAdded = false;
+
             if (newPatient.Id == 0)
             {
                 throw new ArgumentException("Az azonosító nem lehet 0.");
@@ -158,142 +160,194 @@ namespace HospitalManagement.Model
         public bool updateEmployee(EmployeeDTO employeeUpdate)
         {
             bool isEmpUpdated = false;
-            try
+
+            if (employeeUpdate.Id == 0)
             {
-                var employee = employeeEntities.Employees.Find(employeeUpdate.Id);
-                employee.Name = employeeUpdate.Name;
-                employee.Age = employeeUpdate.Age;
-                employee.Occupation = employeeUpdate.Occupation;
-                employee.Address = employeeUpdate.Address;
-                employee.Email = employeeUpdate.Email;
-                employee.Phone = employeeUpdate.Phone;
-                employee.Speciality = employeeUpdate.Speciality;
-                employee.Salary = employeeUpdate.Salary;
-                var numberOfRowsAffected = employeeEntities.SaveChanges();
-                isEmpUpdated = numberOfRowsAffected > 0;
+                throw new ArgumentException("Az azonosító nem lehet 0.");
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                try
+                {
+                    var employee = employeeEntities.Employees.Find(employeeUpdate.Id);
+                    employee.Name = employeeUpdate.Name;
+                    employee.Age = employeeUpdate.Age;
+                    employee.Occupation = employeeUpdate.Occupation;
+                    employee.Address = employeeUpdate.Address;
+                    employee.Email = employeeUpdate.Email;
+                    employee.Phone = employeeUpdate.Phone;
+                    employee.Speciality = employeeUpdate.Speciality;
+                    employee.Salary = employeeUpdate.Salary;
+                    var numberOfRowsAffected = employeeEntities.SaveChanges();
+                    isEmpUpdated = numberOfRowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return isEmpUpdated;
             }
-            return isEmpUpdated;
         }
 
         // PATIENT FRISSÍTÉSE
         public bool updatePatient(PatientDTO patientUpdate)
         {
             bool isPatUpdated = false;
-            try
+
+            if (patientUpdate.Id == 0)
             {
-                var patient = patientEntities.Patients.Find(patientUpdate.Id);
-                patient.Name = patientUpdate.Name;
-                patient.Age = patientUpdate.Age;
-                patient.Class = patientUpdate.Class;
-                patient.Address = patientUpdate.Address;
-                patient.Email = patientUpdate.Email;
-                patient.Phone = patientUpdate.Phone;
-                var numberOfRowsAffected = patientEntities.SaveChanges();
-                isPatUpdated = numberOfRowsAffected > 0;
+                throw new ArgumentException("Az azonosító nem lehet 0.");
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                try
+                {
+                    var patient = patientEntities.Patients.Find(patientUpdate.Id);
+                    patient.Name = patientUpdate.Name;
+                    patient.Age = patientUpdate.Age;
+                    patient.Class = patientUpdate.Class;
+                    patient.Address = patientUpdate.Address;
+                    patient.Email = patientUpdate.Email;
+                    patient.Phone = patientUpdate.Phone;
+                    var numberOfRowsAffected = patientEntities.SaveChanges();
+                    isPatUpdated = numberOfRowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return isPatUpdated;
             }
-            return isPatUpdated;
         }
 
         // EMPLOYEE TÖRLÉSE
         public bool deleteEmployee(int id)
         {
             bool isEmpDeleted = false;
-            try
+
+            if (id == 0)
             {
-                var employee = employeeEntities.Employees.Find(id);
-                employeeEntities.Employees.Remove(employee);
-                var numberOfRowsEffected = employeeEntities.SaveChanges();
-                isEmpDeleted = numberOfRowsEffected > 0;
+                throw new ArgumentException("Az azonosító nem lehet 0.");
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                try
+                {
+                    var employee = employeeEntities.Employees.Find(id);
+                    employeeEntities.Employees.Remove(employee);
+                    var numberOfRowsEffected = employeeEntities.SaveChanges();
+                    isEmpDeleted = numberOfRowsEffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return isEmpDeleted;
             }
-            return isEmpDeleted;
         }
 
         // PATIENT TÖRLÉSE
         public bool deletePatient(int id)
         {
             bool isPatDeleted = false;
-            try
+
+            if (id == 0)
             {
-                var patient = patientEntities.Patients.Find(id);
-                patientEntities.Patients.Remove(patient);
-                var numberOfRowsEffected = patientEntities.SaveChanges();
-                isPatDeleted = numberOfRowsEffected > 0;
+                throw new ArgumentException("Az azonosító nem lehet 0.");
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                try
+                {
+                    var patient = patientEntities.Patients.Find(id);
+                    patientEntities.Patients.Remove(patient);
+                    var numberOfRowsEffected = patientEntities.SaveChanges();
+                    isPatDeleted = numberOfRowsEffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return isPatDeleted;
             }
-            return isPatDeleted;
         }
 
         // EMPLOYEE KERESÉSE
         public EmployeeDTO searchEmployee(int id)
         {
             EmployeeDTO employeeDTO = null;
-            try
+
+            if (id == 0)
             {
-                var employee = employeeEntities.Employees.Find(id);
-                if (employee != null)
+                throw new ArgumentException("0 azonosítójú alkalmazott nem létezik.");
+            }
+            else
+            {
+                try
                 {
-                    employeeDTO = new EmployeeDTO()
+                    var employee = employeeEntities.Employees.Find(id);
+                    if (employee != null)
                     {
-                        Id = employee.Id,
-                        Name = employee.Name,
-                        Age = employee.Age,
-                        Occupation = employee.Occupation,
-                        Address = employee.Address,
-                        Email = employee.Email,
-                        Phone = employee.Phone,
-                        Speciality = employee.Speciality,
-                        Salary = employee.Salary
-                    };
+                        employeeDTO = new EmployeeDTO()
+                        {
+                            Id = employee.Id,
+                            Name = employee.Name,
+                            Age = employee.Age,
+                            Occupation = employee.Occupation,
+                            Address = employee.Address,
+                            Email = employee.Email,
+                            Phone = employee.Phone,
+                            Speciality = employee.Speciality,
+                            Salary = employee.Salary
+                        };
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                return employeeDTO;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return employeeDTO;
         }
 
         // PATIENT KERESÉSE
         public PatientDTO searchPatient(int id)
         {
             PatientDTO patientDTO = null;
-            try
+
+            if (id == 0)
             {
-                var patient = patientEntities.Patients.Find(id);
-                if (patient != null)
+                throw new ArgumentException("0 azonosítójú beteg nem létezik.");
+            }
+            else
+            {
+                try
                 {
-                    patientDTO = new PatientDTO()
+                    var patient = patientEntities.Patients.Find(id);
+                    if (patient != null)
                     {
-                        Id = patient.Id,
-                        Name = patient.Name,
-                        Age = patient.Age,
-                        Class = patient.Class,
-                        Address = patient.Address,
-                        Email = patient.Email,
-                        Phone = patient.Phone
-                    };
+                        patientDTO = new PatientDTO()
+                        {
+                            Id = patient.Id,
+                            Name = patient.Name,
+                            Age = patient.Age,
+                            Class = patient.Class,
+                            Address = patient.Address,
+                            Email = patient.Email,
+                            Phone = patient.Phone
+                        };
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                return patientDTO;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return patientDTO;
         }
 
         // EMPLOYEE MEGSZÁMLÁLÁSA
