@@ -37,3 +37,11 @@ create table Patients
 	Phone int not null,
 	constraint pk_Patients primary key(Id)
 )
+
+create table Admins
+(
+	Id int not null,
+	Username varchar(100) not null,
+	Password varchar(255) not null,
+	constraint pk_Admins primary key(Id)
+)
