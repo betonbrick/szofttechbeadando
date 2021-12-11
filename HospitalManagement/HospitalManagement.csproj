@@ -79,7 +79,7 @@
     <Compile Include="Model\Admins.cs">
       <DependentUpon>HospitalDbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\AdminsDTO.cs" />
+    <Compile Include="Model\AuthenticatorService.cs" />
     <Compile Include="Model\DataPrinting.cs" />
     <Compile Include="Model\EmployeeDTO.cs" />
     <Compile Include="Model\Employees.cs">
@@ -101,7 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalDbModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\LoginService.cs" />
     <Compile Include="Model\PatientDTO.cs" />
     <Compile Include="Model\Patients.cs">
       <DependentUpon>HospitalDbModel.tt</DependentUpon>

@@ -2,6 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\HospitalManagement",
+    "\\HospitalManagement\\Model",
+    "\\HospitalManagement\\View",
     "\\HospitalManagement\\ViewModel"
   ],
   "SelectedNode": "\\HospitalManagement\\MainWindow.xaml",

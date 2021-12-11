@@ -10,24 +10,28 @@ namespace HospitalManagement.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
-        public AdminsDTO CurrLogin { get; set; }
+        public Hashing hashing;
+
         public RelayCommand Authenticate { get; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         public string Message { get; set; }
 
-        private LoginService loginService;
+        private AuthenticatorService authService;
         public LoginViewModel()
         {
-            loginService = new LoginService();
-            CurrLogin = new AdminsDTO();
-            Authenticate = new RelayCommand(authenticateAdmin);
+            authService = new AuthenticatorService();
 
+            Authenticate = new RelayCommand(authenticateAdmin);
+            hashing = new Hashing();
         }
-        public void authenticateAdmin() 
+        public void authenticateAdmin()
         {
             try
             {
-                bool isAuthSuccessful = loginService.AuthenticateAdmin(CurrLogin);
-                if (!isAuthSuccessful) 
+
+                bool isAuthSuccessful = authService.Authenticate(Username, hashing.createMD5Hash(Password));
+                if (!isAuthSuccessful)
                 {
                     Message = "Érvénytelen bejelentkezés!";
                 }
@@ -37,13 +41,13 @@ namespace HospitalManagement.ViewModel
                     MainWindow mw = new MainWindow();
                     lw.Close();
                     mw.Show();
-                    
+
                 }
             }
             catch (Exception ex)
             {
 
-                 throw ex;
+                throw ex;
             }
         }
     }
