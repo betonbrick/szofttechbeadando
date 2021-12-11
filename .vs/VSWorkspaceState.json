@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\HospitalManagement",
-    "\\HospitalManagement\\Model",
-    "\\HospitalManagement\\View"
+    "\\HospitalManagement\\ViewModel"
   ],
-  "SelectedNode": "\\HospitalManagement\\Model\\PeopleService.cs",
+  "SelectedNode": "\\HospitalManagement\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

@@ -1,4 +1,5 @@
 ﻿using HospitalManagement.Model;
+using HospitalManagement.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,12 @@ namespace HospitalManagement
 {
     public partial class LoginWindow : Window
     {
+        LoginViewModel loginViewModel;
         public LoginWindow()
         {
             InitializeComponent();
+            loginViewModel = new LoginViewModel();
+            DataContext = loginViewModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,11 +39,6 @@ namespace HospitalManagement
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Hashing hash = new Hashing();
-
-            MessageBox.Show(hash.createMD5Hash(txtPassword.Password));
-        }
+       
     }
 }
