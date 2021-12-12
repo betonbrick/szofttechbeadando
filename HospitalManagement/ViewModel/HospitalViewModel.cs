@@ -31,11 +31,11 @@ namespace HospitalManagement.ViewModel
         {
             get
             {
-                return (int)EmployeeService.countAllEmployees();
+                return (int)EmployeeService.countEmployees();
             }
             set
             {
-                EmployeeService.countAllEmployees();
+                EmployeeService.countEmployees();
             }
         }
 
@@ -43,11 +43,11 @@ namespace HospitalManagement.ViewModel
         {
             get
             {
-                return (int)EmployeeService.countAllPatients();
+                return (int)EmployeeService.countPatients();
             }
             set
             {
-                EmployeeService.countAllEmployees();
+                EmployeeService.countEmployees();
             }
         }
 
@@ -250,7 +250,7 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                EmployeeDTO employee = EmployeeService.searchEmployee(CurrEmp.Id);
+                EmployeeDTO employee = EmployeeService.searchEmployee(CurrEmp.Name);
 
                 if (employee != null)
                 {

@@ -1,35 +1,3 @@
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe.config
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.pdb
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.dll
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.SqlServer.dll
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.xml
-D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.SqlServer.xml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\DataGridStyle.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\InteractionButtonsStyle.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\MenuButtonStyle.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\MainWindow.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\EmployeesView.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\HomeView.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\PatientsView.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\App.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_Content.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_MarkupCompile.cache
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_MarkupCompile.lref
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\App.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\MainWindow.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\EmployeesView.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\HomeView.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\PatientsView.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.g.resources
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.Properties.Resources.resources
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.GenerateResource.cache
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.CoreCompileInputs.cache
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.CopyLocal.cache
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.exe
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.pdb
 D:\Szofftech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe.config
 D:\Szofftech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe
 D:\Szofftech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.pdb
@@ -64,10 +32,6 @@ D:\Szofftech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.exe
 D:\Szofftech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.pdb
 D:\Szofftech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.g.cs
 D:\Szofftech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.g.cs
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\SwitchButtonStyle.baml
-D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.SuggestedBindingRedirects.cache
 D:\szoftechbeadando\HospitalManagement\obj\Debug\Resources\DataGridStyle.baml
 D:\szoftechbeadando\HospitalManagement\obj\Debug\Resources\InteractionButtonsStyle.baml
@@ -104,3 +68,40 @@ D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.exe
 D:\szoftechbeadando\HospitalManagement\obj\Debug\HospitalManagement.pdb
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe.config
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.exe
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\HospitalManagement.pdb
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.dll
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.SqlServer.dll
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.xml
+D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\EntityFramework.SqlServer.xml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\DataGridStyle.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\InteractionButtonsStyle.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\MenuButtonStyle.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\SwitchButtonStyle.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Resources\ToolTipStyle.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\MainWindow.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\EmployeesView.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\HomeView.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\PatientsView.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\App.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_Content.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_MarkupCompile.cache
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement_MarkupCompile.lref
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\App.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\LoginWindow.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\MainWindow.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\EmployeesView.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\HomeView.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\View\PatientsView.baml
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.g.resources
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.Properties.Resources.resources
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.GenerateResource.cache
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.CoreCompileInputs.cache
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.CopyLocal.cache
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.exe
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.pdb
+D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache

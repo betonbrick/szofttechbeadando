@@ -21,9 +21,11 @@ namespace HospitalManagement.Model
         public List<EmployeeDTO> getAllEmployees()
         {
             List<EmployeeDTO> employeeDTOs = new List<EmployeeDTO>();
+
             try
             {
                 var employees = from employee in employeeEntities.Employees select employee;
+
                 foreach (var employee in employees)
                 {
                     employeeDTOs.Add(new EmployeeDTO
@@ -44,6 +46,7 @@ namespace HospitalManagement.Model
             {
                 throw ex;
             }
+
             return employeeDTOs;
         }
 
@@ -51,9 +54,11 @@ namespace HospitalManagement.Model
         public List<PatientDTO> getAllPatients()
         {
             List<PatientDTO> patientDTOs = new List<PatientDTO>();
+
             try
             {
                 var patients = from patient in patientEntities.Patients select patient;
+
                 foreach (var patient in patients)
                 {
                     patientDTOs.Add(new PatientDTO
@@ -72,6 +77,7 @@ namespace HospitalManagement.Model
             {
                 throw ex;
             }
+
             return patientDTOs;
         }
 
@@ -93,9 +99,11 @@ namespace HospitalManagement.Model
                 try
                 {
                     var employee = new Employees();
+
                     employee.Id = newEmployee.Id;
                     employee.Name = newEmployee.Name;
                     employee.Age = newEmployee.Age;
+
                     if (isChecked)
                     {
                         employee.Occupation = "Nővér";
@@ -104,6 +112,7 @@ namespace HospitalManagement.Model
                     {
                         employee.Occupation = "Orvos";
                     }
+
                     employee.Address = newEmployee.Address;
                     employee.Email = newEmployee.Email;
                     employee.Phone = newEmployee.Phone;
@@ -137,6 +146,7 @@ namespace HospitalManagement.Model
                 try
                 {
                     var patient = new Patients();
+
                     patient.Id = newPatient.Id;
                     patient.Name = newPatient.Name;
                     patient.Age = newPatient.Age;
@@ -172,6 +182,7 @@ namespace HospitalManagement.Model
                 try
                 {
                     var employee = employeeEntities.Employees.Find(employeeUpdate.Id);
+
                     employee.Name = employeeUpdate.Name;
                     employee.Age = employeeUpdate.Age;
                     employee.Occupation = employeeUpdate.Occupation;
@@ -207,6 +218,7 @@ namespace HospitalManagement.Model
                 try
                 {
                     var patient = patientEntities.Patients.Find(patientUpdate.Id);
+
                     patient.Name = patientUpdate.Name;
                     patient.Age = patientUpdate.Age;
                     patient.Class = patientUpdate.Class;
@@ -240,7 +252,9 @@ namespace HospitalManagement.Model
                 try
                 {
                     var employee = employeeEntities.Employees.Find(id);
+
                     employeeEntities.Employees.Remove(employee);
+
                     var numberOfRowsEffected = employeeEntities.SaveChanges();
                     isEmpDeleted = numberOfRowsEffected > 0;
                 }
@@ -267,7 +281,9 @@ namespace HospitalManagement.Model
                 try
                 {
                     var patient = patientEntities.Patients.Find(id);
+
                     patientEntities.Patients.Remove(patient);
+
                     var numberOfRowsEffected = patientEntities.SaveChanges();
                     isPatDeleted = numberOfRowsEffected > 0;
                 }
@@ -281,19 +297,20 @@ namespace HospitalManagement.Model
         }
 
         // EMPLOYEE KERESÉSE
-        public EmployeeDTO searchEmployee(int id)
+        public EmployeeDTO searchEmployee(string employeeName)
         {
             EmployeeDTO employeeDTO = null;
 
-            if (id == 0)
+            if (employeeName == "")
             {
-                throw new ArgumentException("0 azonosítójú alkalmazott nem létezik.");
+                throw new ArgumentException("Töltse ki a mezőt a kereséshez!");
             }
             else
             {
                 try
                 {
-                    var employee = employeeEntities.Employees.Find(id);
+                    var employee = employeeEntities.Employees.Where(search => search.Name == employeeName).FirstOrDefault();
+
                     if (employee != null)
                     {
                         employeeDTO = new EmployeeDTO()
@@ -314,6 +331,7 @@ namespace HospitalManagement.Model
                 {
                     throw ex;
                 }
+
                 return employeeDTO;
             }
         }
@@ -332,6 +350,7 @@ namespace HospitalManagement.Model
                 try
                 {
                     var patient = patientEntities.Patients.Find(id);
+
                     if (patient != null)
                     {
                         patientDTO = new PatientDTO()
@@ -350,14 +369,16 @@ namespace HospitalManagement.Model
                 {
                     throw ex;
                 }
+
                 return patientDTO;
             }
         }
 
         // EMPLOYEE MEGSZÁMLÁLÁSA
-        public int countAllEmployees()
+        public int countEmployees()
         {
             int count = 0;
+
             try
             {
                 var employees = from employee in employeeEntities.Employees select employee;
@@ -370,13 +391,15 @@ namespace HospitalManagement.Model
             {
                 throw ex;
             }
+
             return count;
         }
 
         // PATIENT MEGSZÁMLÁLÁSA
-        public int countAllPatients()
+        public int countPatients()
         {
             int count = 0;
+
             try
             {
                 var patients = from patient in patientEntities.Patients select patient;
@@ -389,6 +412,7 @@ namespace HospitalManagement.Model
             {
                 throw ex;
             }
+
             return count;
         }
     }

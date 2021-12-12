@@ -22,6 +22,16 @@ namespace HospitalManagement.View
         public HomeView()
         {
             InitializeComponent();
+            LoadContent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoadContent();
+        }
+
+        public void LoadContent()
+        {
             hospitalViewModel = new HospitalViewModel();
             DataContext = hospitalViewModel;
         }

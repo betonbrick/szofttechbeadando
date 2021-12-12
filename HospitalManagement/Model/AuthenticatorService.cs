@@ -14,8 +14,6 @@ namespace HospitalManagement.Model
         public AuthenticatorService()
         {
             loginEntities = new HospitalEntities();
-
-
         }
 
         public bool Authenticate(string username, string password)
@@ -24,6 +22,7 @@ namespace HospitalManagement.Model
             if (checkCredentials(username, password))
             {
                 var query = loginEntities.Admins.Where(login => login.Username == username && login.Password == password).FirstOrDefault();
+
                 if (query != null)
                 {
                     return isAuthenticated = true;
@@ -34,8 +33,10 @@ namespace HospitalManagement.Model
                 }
 
             }
+
             return isAuthenticated;
         }
+
         public bool checkCredentials(string username, string password)
         {
             if (username == null || password == null)
@@ -51,8 +52,5 @@ namespace HospitalManagement.Model
                 return true;
             }
         }
-
-        
-
     }
 }

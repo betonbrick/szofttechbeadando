@@ -9,8 +9,6 @@ namespace HospitalManagement.Model
 {
     public class Hashing
     {
-        public string Password { get; set; }
-
         public string createMD5Hash(string password)
         {
             using (MD5 md5 = MD5.Create())
@@ -24,6 +22,7 @@ namespace HospitalManagement.Model
                     stringBuilder.Append(hashBytes[i].ToString("X2"));
 
                 }
+
                 return stringBuilder.ToString();
             }
         }

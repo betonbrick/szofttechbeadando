@@ -81,6 +81,7 @@
 
                 <Grid Grid.Column="1">
                     <TextBlock Text="Páciensek" FontSize="24" FontWeight="SemiBold" Foreground="#161e29" Margin="30,0,0,0"/>
+                    <Button Style="{StaticResource RefreshContentBtnStyle}" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,30,0" Click="Button_Click"/>
                     <Border Background="White" CornerRadius="12" Margin="15,40,30,30">
                         <DataGrid x:Name="dgvPatients" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Patients, Mode=TwoWay}">
                             <DataGrid.Columns>
