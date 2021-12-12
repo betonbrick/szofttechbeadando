@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="Resources\DataGridStyle.xaml"/>
                 <ResourceDictionary Source="Resources\InteractionButtonsStyle.xaml"/>
                 <ResourceDictionary Source="Resources\SwitchButtonStyle.xaml"/>
+                <ResourceDictionary Source="Resources\ToolTipStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

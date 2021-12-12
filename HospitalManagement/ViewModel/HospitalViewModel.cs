@@ -250,7 +250,7 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                EmployeeDTO employee = EmployeeService.searchEmployee(CurrEmp.Id);
+                EmployeeDTO employee = EmployeeService.searchEmployee(CurrEmp.Name);
 
                 if (employee != null)
                 {

@@ -6,6 +6,6 @@
     "\\HospitalManagement\\View",
     "\\HospitalManagement\\ViewModel"
   ],
-  "SelectedNode": "\\HospitalManagement\\MainWindow.xaml",
+  "SelectedNode": "\\HospitalManagement\\App.xaml",
   "PreviewInSolutionExplorer": false
 }

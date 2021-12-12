@@ -297,19 +297,19 @@ namespace HospitalManagement.Model
         }
 
         // EMPLOYEE KERESÉSE
-        public EmployeeDTO searchEmployee(int id)
+        public EmployeeDTO searchEmployee(string employeeName)
         {
             EmployeeDTO employeeDTO = null;
 
-            if (id == 0)
+            if (employeeName == "")
             {
-                throw new ArgumentException("0 azonosítójú alkalmazott nem létezik.");
+                throw new ArgumentException("Töltse ki a mezőt a kereséshez!");
             }
             else
             {
                 try
                 {
-                    var employee = employeeEntities.Employees.Find(id);
+                    var employee = employeeEntities.Employees.Where(search => search.Name == employeeName).FirstOrDefault();
 
                     if (employee != null)
                     {
