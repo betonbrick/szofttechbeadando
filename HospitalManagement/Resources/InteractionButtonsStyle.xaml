@@ -266,4 +266,35 @@
         </Setter>
     </Style>
 
+    <!--REFRESH CONTENT BUTTON-->
+    <Style x:Key="RefreshContentBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="#bcc2d1"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <!--BUTTON ALAK-->
+                    <Border x:Name="BtnBorder" Background="{TemplateBinding Background}" CornerRadius="15">
+                        <Image Source="../Assets/refresh.png" RenderOptions.BitmapScalingMode="HighQuality" Width="24" Height="24"/>
+                    </Border>
+
+                    <!--EGÉR MŰVELET-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BtnBorder" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#8c909c"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
