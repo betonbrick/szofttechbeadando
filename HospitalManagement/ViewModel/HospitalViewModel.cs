@@ -31,11 +31,11 @@ namespace HospitalManagement.ViewModel
         {
             get
             {
-                return (int)EmployeeService.countAllEmployees();
+                return (int)EmployeeService.countEmployees();
             }
             set
             {
-                EmployeeService.countAllEmployees();
+                EmployeeService.countEmployees();
             }
         }
 
@@ -43,11 +43,11 @@ namespace HospitalManagement.ViewModel
         {
             get
             {
-                return (int)EmployeeService.countAllPatients();
+                return (int)EmployeeService.countPatients();
             }
             set
             {
-                EmployeeService.countAllEmployees();
+                EmployeeService.countEmployees();
             }
         }
 

@@ -17,7 +17,7 @@
 
                     <ControlTemplate.Triggers>
 
-                        <!-- UNCHECKED ÁLLAPOT -->
+                        <!-- DOCTOR KIVÁLASZTVA ÁLLAPOT -->
                         <EventTrigger RoutedEvent="Checked">
                             <BeginStoryboard>
                                 <Storyboard>
@@ -27,7 +27,7 @@
                             </BeginStoryboard>
                         </EventTrigger>
 
-                        <!-- CHECKED ÁLLAPOT -->
+                        <!-- NŐVÉR KIVÁLASZTVA ÁLLAPOT -->
                         <EventTrigger RoutedEvent="Unchecked">
                             <BeginStoryboard>
                                 <Storyboard>

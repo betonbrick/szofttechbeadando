@@ -13,6 +13,7 @@ namespace HospitalManagement.ViewModel
         public Hashing hashing;
 
         public RelayCommand Authenticate { get; }
+
         public string Username { get; set; }
         public string Password { get; set; }
         public string Message { get; set; }
@@ -21,7 +22,6 @@ namespace HospitalManagement.ViewModel
         public LoginViewModel()
         {
             authService = new AuthenticatorService();
-
             Authenticate = new RelayCommand(authenticateAdmin);
             hashing = new Hashing();
         }
@@ -29,8 +29,8 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-
                 bool isAuthSuccessful = authService.Authenticate(Username, hashing.createMD5Hash(Password));
+
                 if (!isAuthSuccessful)
                 {
                     Message = "Érvénytelen bejelentkezés!";
@@ -46,7 +46,6 @@ namespace HospitalManagement.ViewModel
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
