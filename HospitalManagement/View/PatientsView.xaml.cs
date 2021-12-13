@@ -16,6 +16,15 @@ namespace HospitalManagement.View
             patientViewModel = new HospitalViewModel();
             DataContext = patientViewModel;
 
+            cmbxClass.Items.Add("Belgyógyászat");
+            cmbxClass.Items.Add("Endokrinológia");
+            cmbxClass.Items.Add("Gasztroenterológia");
+            cmbxClass.Items.Add("Sebészet");
+            cmbxClass.Items.Add("Szülészet");
+            cmbxClass.Items.Add("Fül-orr-gégészet");
+            cmbxClass.Items.Add("Szemészet");
+            cmbxClass.Items.Add("Urológia");
+
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 3);
