@@ -1,6 +1,8 @@
 ﻿using HospitalManagement.ViewModel;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace HospitalManagement.View
@@ -58,6 +60,18 @@ namespace HospitalManagement.View
         {
             messageBlock.Visibility = System.Windows.Visibility.Visible;
             dispatcherTimer.Start();
+        }
+
+        private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$")).IsMatch(txtEmail.Text))
+            {
+                txtEmail.Background = Brushes.White;
+            }
+            else
+            {
+                txtEmail.Background = Brushes.IndianRed;
+            }
         }
     }
 }
