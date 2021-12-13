@@ -38,7 +38,5 @@ namespace HospitalManagement
                 DragMove();
             }
         }
-
-       
     }
 }

@@ -38,8 +38,8 @@ namespace HospitalManagement.ViewModel
                 else
                 {
                     LoginWindow lw = new LoginWindow();
-                    MainWindow mw = new MainWindow();
                     lw.Close();
+                    MainWindow mw = new MainWindow();
                     mw.Show();
 
                 }

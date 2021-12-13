@@ -107,16 +107,18 @@ namespace HospitalManagement.Model
                     if (isChecked)
                     {
                         employee.Occupation = "Nővér";
+                        employee.Speciality = "-";
                     }
                     else
                     {
                         employee.Occupation = "Orvos";
+                        employee.Speciality = newEmployee.Speciality;
                     }
 
                     employee.Address = newEmployee.Address;
                     employee.Email = newEmployee.Email;
                     employee.Phone = newEmployee.Phone;
-                    employee.Speciality = newEmployee.Speciality;
+                    
                     employee.Salary = newEmployee.Salary;
 
                     employeeEntities.Employees.Add(employee);
@@ -169,7 +171,7 @@ namespace HospitalManagement.Model
         }
 
         // EMPLOYEE FRISSÍTÉSE
-        public bool updateEmployee(EmployeeDTO employeeUpdate)
+        public bool updateEmployee(EmployeeDTO employeeUpdate, bool isOccupationChanged)
         {
             bool isEmpUpdated = false;
 
@@ -185,11 +187,21 @@ namespace HospitalManagement.Model
 
                     employee.Name = employeeUpdate.Name;
                     employee.Age = employeeUpdate.Age;
-                    employee.Occupation = employeeUpdate.Occupation;
+                    if (isOccupationChanged)
+                    {
+                        employee.Occupation = "Nővér";
+                        employee.Speciality = "-";
+                    }
+                    else
+                    {
+                        employee.Occupation = "Orvos";
+                        employee.Speciality = employeeUpdate.Speciality;
+
+                    }
                     employee.Address = employeeUpdate.Address;
                     employee.Email = employeeUpdate.Email;
                     employee.Phone = employeeUpdate.Phone;
-                    employee.Speciality = employeeUpdate.Speciality;
+                    
                     employee.Salary = employeeUpdate.Salary;
 
                     var numberOfRowsAffected = employeeEntities.SaveChanges();
