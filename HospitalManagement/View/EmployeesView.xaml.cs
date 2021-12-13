@@ -1,5 +1,8 @@
-﻿using HospitalManagement.ViewModel;
+﻿using HospitalManagement.Model;
+using HospitalManagement.ViewModel;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using System.Windows.Threading;
 
@@ -13,8 +16,18 @@ namespace HospitalManagement.View
         public EmployeesView()
         {
             InitializeComponent();
+
             employeeViewModel = new HospitalViewModel();
             DataContext = employeeViewModel;
+
+            cmbxSpecialty.Items.Add("Belgyógyász");
+            cmbxSpecialty.Items.Add("Endokrinológus");
+            cmbxSpecialty.Items.Add("Gasztroenterológusz");
+            cmbxSpecialty.Items.Add("Sebész");
+            cmbxSpecialty.Items.Add("Szülész-nőgyógyász");
+            cmbxSpecialty.Items.Add("Fül-orr-gégész");
+            cmbxSpecialty.Items.Add("Szemész");
+            cmbxSpecialty.Items.Add("Urológus");
 
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);

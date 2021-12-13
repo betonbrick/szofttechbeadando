@@ -71,7 +71,7 @@ namespace HospitalManagement.ViewModel
             UpdateEmp = new RelayCommand(updateEmp);
             DeleteEmp = new RelayCommand(deleteEmp);
             SearchEmp = new RelayCommand(searchEmp);
-           
+
 
             SavePat = new RelayCommand(savePat);
             UpdatePat = new RelayCommand(updatePat);
@@ -154,7 +154,16 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                bool isEmpUpdated = EmployeeService.updateEmployee(CurrEmp);
+                bool isEmpUpdated = false;
+
+                if (!Occupation)
+                {
+                    isEmpUpdated = EmployeeService.updateEmployee(CurrEmp, Occupation);
+                }
+                else
+                {
+                    isEmpUpdated = EmployeeService.updateEmployee(CurrEmp, Occupation);
+                }
 
                 if (isEmpUpdated)
                 {
@@ -303,7 +312,7 @@ namespace HospitalManagement.ViewModel
             }
         }
 
-        public void printData() 
+        public void printData()
         {
             DataPrinting dp = new DataPrinting();
             dp.OnDataGridPrinting();

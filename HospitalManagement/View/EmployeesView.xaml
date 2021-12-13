@@ -60,7 +60,8 @@
 
                 <Grid Grid.Row="4">
                     <TextBlock Text="Szakterület" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
-                    <TextBox x:Name="txtSpecialty" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Speciality, Mode=TwoWay}"/>
+                    <!--<TextBox x:Name="txtSpecialty" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Speciality, Mode=TwoWay}"/>-->
+                    <ComboBox x:Name="cmbxSpecialty" Width="200" Height="30" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" ItemsSource="{Binding Path=specialty, Mode=TwoWay}" SelectedItem="{Binding Path=CurrEmp.Speciality, Mode=TwoWay}" />
                     <TextBlock Text="Fizetés" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="430,0,0,0"/>
                     <TextBox x:Name="txtSalary" FontSize="22" Width="170" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="530,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Salary, Mode=TwoWay}"/>
                 </Grid>
@@ -73,7 +74,7 @@
 
             <Grid Grid.Row="2">
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
-                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}">
+                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}" Margin="0,0,0,20">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
                             <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>
