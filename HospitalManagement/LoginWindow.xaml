@@ -57,7 +57,7 @@
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <TextBox x:Name="txtPassword" Height="30" FontSize="16" VerticalContentAlignment="Center" BorderThickness="0" Margin="30,0,30,0" Text="{Binding Path=Password, Mode=TwoWay}"/>
+                    <TextBox x:Name="txtPassword" Height="30" FontSize="16" VerticalContentAlignment="Center" BorderThickness="0" Margin="30,0,30,0" Text="{Binding Path=Password, Mode=TwoWay}" VerticalAlignment="Bottom"/>
                 </Grid>
 
                 <Grid Grid.Row="4">
