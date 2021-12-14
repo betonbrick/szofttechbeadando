@@ -19,11 +19,13 @@ namespace HospitalManagement.ViewModel
         public string Message { get; set; }
 
         private AuthenticatorService authService;
+
         public LoginViewModel()
         {
             authService = new AuthenticatorService();
             Authenticate = new RelayCommand(authenticateAdmin);
             hashing = new Hashing();
+
         }
         public void authenticateAdmin()
         {
@@ -37,6 +39,7 @@ namespace HospitalManagement.ViewModel
                 }
                 else
                 {
+                    Message = "";
                     LoginWindow lw = new LoginWindow();
                     lw.Close();
                     MainWindow mw = new MainWindow();

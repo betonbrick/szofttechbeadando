@@ -61,7 +61,7 @@
                 </Grid>
 
                 <Grid Grid.Row="4">
-                    <TextBlock x:Name="messageBlock" FontSize="12" Foreground="Red" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30,0,30,0" Text="{Binding Path=Message, Mode=TwoWay}"/>
+                    <TextBlock x:Name="messageBlock" FontSize="12" Foreground="Red" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30,0,30,0" Text="{Binding Path=Message}"/>
                 </Grid>
 
                 <Grid Grid.Row="5">
@@ -71,7 +71,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <Button Content="Belépés" Style="{StaticResource LoginBtnStyle}" Margin="40,0,0,0" Command="{Binding Path=Authenticate}"/>
+                        <Button Content="Belépés" Style="{StaticResource LoginBtnStyle}" Margin="40,0,0,0" Command="{Binding Path=Authenticate}" Click="Button_Click_1"/>
                     </Grid>
 
                     <Grid Grid.Column="1">
