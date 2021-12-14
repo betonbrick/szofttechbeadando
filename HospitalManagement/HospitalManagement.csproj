@@ -213,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\refresh.png" />
+    <Resource Include="Assets\logo.png" />
     <Content Include="Model\HospitalDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HospitalDbModel.edmx</DependentUpon>
