@@ -12,7 +12,7 @@
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Grid>
                         <Border x:Name="Border" Background="#2679b5" Width="46" Height="26" CornerRadius="13" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        <Ellipse x:Name="Ellipse" Fill="White" Height="22" Width="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3,0,0,0"/>
+                        <Ellipse x:Name="Ellipse" Fill="#e6e6e6" Height="18" Width="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3,0,0,0"/>
                     </Grid>
 
                     <ControlTemplate.Triggers>
@@ -22,7 +22,7 @@
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#c868de" Duration="0:0:0.2"/>
-                                    <ThicknessAnimation Storyboard.TargetName="Ellipse" Storyboard.TargetProperty="Margin" To="21,0,0,0" Duration="0:0:0.2"/>
+                                    <ThicknessAnimation Storyboard.TargetName="Ellipse" Storyboard.TargetProperty="Margin" To="25,0,0,0" Duration="0:0:0.2"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>

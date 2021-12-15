@@ -289,7 +289,7 @@ namespace HospitalManagement.ViewModel
         {
             try
             {
-                PatientDTO patient = PatientService.searchPatient(CurrPat.Id);
+                PatientDTO patient = PatientService.searchPatient(CurrPat.Name);
 
                 if (patient != null)
                 {

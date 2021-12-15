@@ -10,11 +10,11 @@ none
 false
 TRACE
 D:\Szofttech. Beadandó\HospitalManagement\App.xaml
-101471834493
+11252758212
 2-1666467474
-251767860366
+26672774737
 20-906378220
-LoginWindow.xaml;MainWindow.xaml;Resources\DataGridStyle.xaml;Resources\InteractionButtonsStyle.xaml;Resources\MenuButtonStyle.xaml;Resources\SwitchButtonStyle.xaml;Resources\ToolTipStyle.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\PatientsView.xaml;
+Components\BindablePasswordBox.xaml;LoginWindow.xaml;MainWindow.xaml;Resources\DataGridStyle.xaml;Resources\InteractionButtonsStyle.xaml;Resources\MenuButtonStyle.xaml;Resources\SwitchButtonStyle.xaml;Resources\ToolTipStyle.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\PatientsView.xaml;
 
 True
 

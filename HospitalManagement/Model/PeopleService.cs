@@ -349,19 +349,19 @@ namespace HospitalManagement.Model
         }
 
         // PATIENT KERESÉSE
-        public PatientDTO searchPatient(int id)
+        public PatientDTO searchPatient(string patientName)
         {
             PatientDTO patientDTO = null;
 
-            if (id == 0)
+            if (patientName == "")
             {
-                throw new ArgumentException("0 azonosítójú beteg nem létezik.");
+                throw new ArgumentException("Töltse ki a mezőt a kereséshez!");
             }
             else
             {
                 try
                 {
-                    var patient = patientEntities.Patients.Find(id);
+                    var patient = patientEntities.Patients.Where(search => search.Name == patientName).FirstOrDefault();
 
                     if (patient != null)
                     {

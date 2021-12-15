@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\HospitalManagement",
-    "\\HospitalManagement\\Model",
-    "\\HospitalManagement\\View",
-    "\\HospitalManagement\\ViewModel"
+    ""
   ],
-  "SelectedNode": "\\HospitalManagement\\App.xaml",
+  "SelectedNode": "\\HospitalManagement.sln",
   "PreviewInSolutionExplorer": false
 }
