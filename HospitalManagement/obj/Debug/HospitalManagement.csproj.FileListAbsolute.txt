@@ -107,3 +107,24 @@ D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.pdb
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Components\BindablePasswordBox.g.cs
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\Components\BindablePasswordBox.baml
 D:\Szofttech. Beadandó\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csproj.AssemblyReference.cache
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csproj.SuggestedBindingRedirects.cache
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.exe.config
+D:\szoftechv2\HospitalManagement\obj\Debug\Resources\DataGridStyle.baml
+D:\szoftechv2\HospitalManagement\obj\Debug\Resources\InteractionButtonsStyle.baml
+D:\szoftechv2\HospitalManagement\obj\Debug\Resources\MenuButtonStyle.baml
+D:\szoftechv2\HospitalManagement\obj\Debug\Resources\SwitchButtonStyle.baml
+D:\szoftechv2\HospitalManagement\obj\Debug\Resources\ToolTipStyle.baml
+D:\szoftechv2\HospitalManagement\obj\Debug\Components\BindablePasswordBox.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\LoginWindow.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\MainWindow.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\View\EmployeesView.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\View\HomeView.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\View\PatientsView.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\App.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement_Content.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement_MarkupCompile.cache
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement_MarkupCompile.lref
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.exe
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.pdb

@@ -5,7 +5,17 @@
       "ProjectGuid": "ab1b48af-2276-44eb-a0cf-44ddcff25053",
       "DisplayName": "HospitalManagement",
       "ColorIndex": 0
+    },
+    "7c8ee9c6-d56e-40fb-a7ba-8cdd21d1d2a1": {
+      "ProjectGuid": "7c8ee9c6-d56e-40fb-a7ba-8cdd21d1d2a1",
+      "DisplayName": "HospitalManagementTests",
+      "ColorIndex": 1
+    },
+    "fb3310f7-1987-451c-9797-b92339365bbe": {
+      "ProjectGuid": "fb3310f7-1987-451c-9797-b92339365bbe",
+      "DisplayName": "BenchmarkTests",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BenchmarkDotNet.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace HospitalManagement.Model
         }
 
         // EMPLOYEE TÁBLA ÖSSZES ELEME
+        [Benchmark]
         public List<EmployeeDTO> getAllEmployees()
         {
             List<EmployeeDTO> employeeDTOs = new List<EmployeeDTO>();
@@ -51,6 +53,7 @@ namespace HospitalManagement.Model
         }
 
         // PATIENT TÁBLA ÖSSZES ELEME
+        [Benchmark]
         public List<PatientDTO> getAllPatients()
         {
             List<PatientDTO> patientDTOs = new List<PatientDTO>();

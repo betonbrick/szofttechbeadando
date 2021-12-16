@@ -1,4 +1,5 @@
-﻿using HospitalManagement.Model;
+﻿using BenchmarkDotNet.Running;
+using HospitalManagement.Model;
 using HospitalManagement.ViewModel.Base;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,8 @@ namespace HospitalManagement.ViewModel
                     lw.Close();
                     MainWindow mw = new MainWindow();
                     mw.Show();
+
+                    var result = BenchmarkRunner.Run<PeopleService>();
 
                 }
             }
