@@ -64,13 +64,25 @@ namespace HospitalManagement.View
 
         private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if ((new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$")).IsMatch(txtEmail.Text))
+            if (!(new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$")).IsMatch(txtEmail.Text))
             {
                 txtEmail.Background = Brushes.White;
             }
             else
             {
                 txtEmail.Background = Brushes.IndianRed;
+            }
+        }
+
+        private void txtPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((new Regex(@"^[0-9]{9}$")).IsMatch(txtPhone.Text))
+            {
+                txtPhone.Background = Brushes.White;
+            }
+            else
+            {
+                txtPhone.Background = Brushes.IndianRed;
             }
         }
     }

@@ -24,7 +24,7 @@ namespace HospitalManagement.View
 
             cmbxSpecialty.Items.Add("Belgyógyász");
             cmbxSpecialty.Items.Add("Endokrinológus");
-            cmbxSpecialty.Items.Add("Gasztroenterológusz");
+            cmbxSpecialty.Items.Add("Gasztroenterológus");
             cmbxSpecialty.Items.Add("Sebész");
             cmbxSpecialty.Items.Add("Szülész-nőgyógyász");
             cmbxSpecialty.Items.Add("Fül-orr-gégész");
@@ -75,6 +75,18 @@ namespace HospitalManagement.View
             else
             {
                 txtEmail.Background = Brushes.IndianRed;
+            }
+        }
+
+        private void txtPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((new Regex(@"^[0-9]{9}$")).IsMatch(txtPhone.Text))
+            {
+                txtPhone.Background = Brushes.White;
+            }
+            else
+            {
+                txtPhone.Background = Brushes.IndianRed;
             }
         }
     }

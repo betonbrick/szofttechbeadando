@@ -47,8 +47,8 @@
                 <Grid Grid.Row="2">
                     <TextBlock Text="Email" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                     <TextBox x:Name="txtEmail" FontSize="22" Width="270" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Email, Mode=TwoWay}" TextChanged="txtEmail_TextChanged"/>
-                    <TextBlock Text="Telefon" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0"/>
-                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="590,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Phone, Mode=TwoWay}"/>
+                    <TextBlock Text="Telefon (+36 ...)" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0"/>
+                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="670,0,0,0" BorderThickness="0" Text="{Binding Path=CurrPat.Phone, Mode=TwoWay}" TextChanged="txtPhone_TextChanged"/>
                 </Grid>
 
                 <Grid Grid.Row="3">
