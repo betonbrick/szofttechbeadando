@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Model
 {
+    [MemoryDiagnoser]
     public class PeopleService
     {
+        
         private HospitalEntities employeeEntities;
         private HospitalEntities patientEntities;
 
@@ -17,7 +19,7 @@ namespace HospitalManagement.Model
             employeeEntities = new HospitalEntities();
             patientEntities = new HospitalEntities();
         }
-
+        
         // EMPLOYEE TÁBLA ÖSSZES ELEME
         [Benchmark]
         public List<EmployeeDTO> getAllEmployees()

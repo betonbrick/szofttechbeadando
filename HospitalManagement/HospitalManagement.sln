@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagement", "Hospi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementTests", "..\HospitalManagementTests\HospitalManagementTests.csproj", "{B1C80147-E042-466C-A1C1-0030E12AE12A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BenchmarkTest", "BenchmarkTest", "{606AE943-C735-4EFB-A01B-39B9388601E1}"
+	ProjectSection(SolutionItems) = preProject
+		bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log = bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

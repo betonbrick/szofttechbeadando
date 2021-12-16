@@ -369,7 +369,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HospitalDbModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="BanchmarkTests\HospitalManagement.Model.PeopleService-20211216-174619.log" />
     <None Include="Model\HospitalDbModel.edmx.diagram">
       <DependentUpon>HospitalDbModel.edmx</DependentUpon>
     </None>
