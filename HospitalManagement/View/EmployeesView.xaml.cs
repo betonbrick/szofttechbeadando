@@ -1,8 +1,5 @@
-﻿using HospitalManagement.Model;
-using HospitalManagement.ViewModel;
+﻿using HospitalManagement.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Media;

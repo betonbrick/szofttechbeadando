@@ -64,7 +64,7 @@ namespace HospitalManagement.View
 
         private void txtEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (!(new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$")).IsMatch(txtEmail.Text))
+            if ((new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$")).IsMatch(txtEmail.Text))
             {
                 txtEmail.Background = Brushes.White;
             }

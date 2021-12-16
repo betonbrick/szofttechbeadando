@@ -1,10 +1,5 @@
 ﻿using HospitalManagement.Model;
 using HospitalManagement.ViewModel.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HospitalManagement.ViewModel
 {
@@ -40,16 +35,14 @@ namespace HospitalManagement.ViewModel
                 else
                 {
                     Message = "";
-                    LoginWindow lw = new LoginWindow();
-                    lw.Close();
-                    MainWindow mw = new MainWindow();
-                    mw.Show();
 
+                    MainWindow mainWin = new MainWindow();
+                    mainWin.Show();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                Message = "Érvénytelen bejelentkezés!";
             }
         }
     }
