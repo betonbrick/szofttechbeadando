@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BenchmarkTest", "BenchmarkT
 		bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log = bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOspitalManagementTests", "..\HOspitalManagementTests\HOspitalManagementTests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementTests", "..\HOspitalManagementTests\HospitalManagementTests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
