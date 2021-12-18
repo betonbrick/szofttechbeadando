@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\HospitalManagement",
+    "\\HospitalManagementTests",
+    "\\HospitalManagement\\Model",
+    "\\HospitalManagement\\View",
     "\\HospitalManagement\\ViewModel"
   ],
-  "SelectedNode": "\\HospitalManagement\\ViewModel\\LoginViewModel.cs",
+  "SelectedNode": "\\HospitalManagement\\HospitalManagement.sln",
   "PreviewInSolutionExplorer": false
 }

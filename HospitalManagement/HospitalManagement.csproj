@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props" Condition="Exists('packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props')" />
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props" Condition="Exists('packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props')" />
   <Import Project="packages\PropertyChanged.Fody.3.4.0\build\PropertyChanged.Fody.props" Condition="Exists('packages\PropertyChanged.Fody.3.4.0\build\PropertyChanged.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -239,6 +239,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="xunit.assert, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -276,11 +279,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HospitalDbModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\HospitalTestDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalTestDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HospitalTestDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalTestDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HospitalTestDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalTestDbModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Model\PatientDTO.cs" />
     <Compile Include="Model\Patients.cs">
       <DependentUpon>HospitalDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PeopleService.cs" />
+    <Compile Include="Model\TestAdmins.cs">
+      <DependentUpon>HospitalTestDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestEmployees.cs">
+      <DependentUpon>HospitalTestDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestPatients.cs">
+      <DependentUpon>HospitalTestDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Base\BaseViewModel.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\HospitalViewModel.cs" />
@@ -372,6 +399,13 @@
     <None Include="Model\HospitalDbModel.edmx.diagram">
       <DependentUpon>HospitalDbModel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Model\HospitalTestDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HospitalTestDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\HospitalTestDbModel.edmx.diagram">
+      <DependentUpon>HospitalTestDbModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -391,6 +425,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\HospitalTestDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalTestDbModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalTestDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\HospitalTestDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HospitalTestDbModel.edmx</DependentUpon>
+      <LastGenOutput>HospitalTestDbModel.cs</LastGenOutput>
+    </Content>
     <Resource Include="Assets\refresh.png" />
     <Resource Include="Assets\logo.png" />
     <Content Include="Model\HospitalDbModel.Context.tt">
@@ -416,9 +460,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\Fody.6.5.1\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.6.5.1\build\Fody.targets'))" />
     <Error Condition="!Exists('packages\PropertyChanged.Fody.3.4.0\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PropertyChanged.Fody.3.4.0\build\PropertyChanged.Fody.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.61\build\Microsoft.Diagnostics.Tracing.TraceEvent.props'))" />
   </Target>
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

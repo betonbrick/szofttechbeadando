@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagement", "HospitalManagement.csproj", "{AB1B48AF-2276-44EB-A0CF-44DDCFF25053}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementTests", "..\HospitalManagementTests\HospitalManagementTests.csproj", "{B1C80147-E042-466C-A1C1-0030E12AE12A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BenchmarkTest", "BenchmarkTest", "{606AE943-C735-4EFB-A01B-39B9388601E1}"
 	ProjectSection(SolutionItems) = preProject
 		bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log = bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOspitalManagementTests", "..\HOspitalManagementTests\HOspitalManagementTests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{AB1B48AF-2276-44EB-A0CF-44DDCFF25053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB1B48AF-2276-44EB-A0CF-44DDCFF25053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB1B48AF-2276-44EB-A0CF-44DDCFF25053}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1C80147-E042-466C-A1C1-0030E12AE12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1C80147-E042-466C-A1C1-0030E12AE12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1C80147-E042-466C-A1C1-0030E12AE12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1C80147-E042-466C-A1C1-0030E12AE12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

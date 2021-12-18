@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/hospitaltestdbmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/hospitaltestdbmodel.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/hospitaldbmodel.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model/hospitaldbmodel.tt")]
 
