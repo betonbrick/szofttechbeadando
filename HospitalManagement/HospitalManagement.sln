@@ -5,11 +5,6 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagement", "HospitalManagement.csproj", "{AB1B48AF-2276-44EB-A0CF-44DDCFF25053}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BenchmarkTest", "BenchmarkTest", "{606AE943-C735-4EFB-A01B-39B9388601E1}"
-	ProjectSection(SolutionItems) = preProject
-		bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log = bin\Release\BenchmarkDotNet.Artifacts\HospitalManagement.Model.PeopleService-20211216-174619.log
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOspitalManagementTests", "..\HOspitalManagementTests\HOspitalManagementTests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Global
