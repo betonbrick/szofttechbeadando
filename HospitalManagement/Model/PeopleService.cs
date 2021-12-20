@@ -10,7 +10,7 @@ namespace HospitalManagement.Model
     //[MemoryDiagnoser]
     public class PeopleService
     {
-        
+
         private HospitalEntities employeeEntities;
         private HospitalEntities patientEntities;
 
@@ -19,7 +19,7 @@ namespace HospitalManagement.Model
             employeeEntities = new HospitalEntities();
             patientEntities = new HospitalEntities();
         }
-        
+
         // EMPLOYEE TÁBLA ÖSSZES ELEME
         //[Benchmark]
         public List<EmployeeDTO> getAllEmployees()
@@ -123,7 +123,7 @@ namespace HospitalManagement.Model
                     employee.Address = newEmployee.Address;
                     employee.Email = newEmployee.Email;
                     employee.Phone = newEmployee.Phone;
-                    
+
                     employee.Salary = newEmployee.Salary;
 
                     employeeEntities.Employees.Add(employee);
@@ -206,7 +206,7 @@ namespace HospitalManagement.Model
                     employee.Address = employeeUpdate.Address;
                     employee.Email = employeeUpdate.Email;
                     employee.Phone = employeeUpdate.Phone;
-                    
+
                     employee.Salary = employeeUpdate.Salary;
 
                     var numberOfRowsAffected = employeeEntities.SaveChanges();
@@ -318,39 +318,32 @@ namespace HospitalManagement.Model
         {
             EmployeeDTO employeeDTO = null;
 
-            if (employeeName == "")
+            try
             {
-                throw new ArgumentException("Töltse ki a mezőt a kereséshez!");
-            }
-            else
-            {
-                try
-                {
-                    var employee = employeeEntities.Employees.Where(search => search.Name == employeeName).FirstOrDefault();
+                var employee = employeeEntities.Employees.Where(search => search.Name == employeeName).FirstOrDefault();
 
-                    if (employee != null)
+                if (employee != null)
+                {
+                    employeeDTO = new EmployeeDTO()
                     {
-                        employeeDTO = new EmployeeDTO()
-                        {
-                            Id = employee.Id,
-                            Name = employee.Name,
-                            Age = employee.Age,
-                            Occupation = employee.Occupation,
-                            Address = employee.Address,
-                            Email = employee.Email,
-                            Phone = employee.Phone,
-                            Speciality = employee.Speciality,
-                            Salary = employee.Salary
-                        };
-                    }
+                        Id = employee.Id,
+                        Name = employee.Name,
+                        Age = employee.Age,
+                        Occupation = employee.Occupation,
+                        Address = employee.Address,
+                        Email = employee.Email,
+                        Phone = employee.Phone,
+                        Speciality = employee.Speciality,
+                        Salary = employee.Salary
+                    };
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-
-                return employeeDTO;
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return employeeDTO;
         }
 
         // PATIENT KERESÉSE
@@ -358,37 +351,30 @@ namespace HospitalManagement.Model
         {
             PatientDTO patientDTO = null;
 
-            if (patientName == "")
+            try
             {
-                throw new ArgumentException("Töltse ki a mezőt a kereséshez!");
-            }
-            else
-            {
-                try
-                {
-                    var patient = patientEntities.Patients.Where(search => search.Name == patientName).FirstOrDefault();
+                var patient = patientEntities.Patients.Where(search => search.Name == patientName).FirstOrDefault();
 
-                    if (patient != null)
+                if (patient != null)
+                {
+                    patientDTO = new PatientDTO()
                     {
-                        patientDTO = new PatientDTO()
-                        {
-                            Id = patient.Id,
-                            Name = patient.Name,
-                            Age = patient.Age,
-                            Class = patient.Class,
-                            Address = patient.Address,
-                            Email = patient.Email,
-                            Phone = patient.Phone
-                        };
-                    }
+                        Id = patient.Id,
+                        Name = patient.Name,
+                        Age = patient.Age,
+                        Class = patient.Class,
+                        Address = patient.Address,
+                        Email = patient.Email,
+                        Phone = patient.Phone
+                    };
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-
-                return patientDTO;
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return patientDTO;
         }
 
         // EMPLOYEE MEGSZÁMLÁLÁSA
