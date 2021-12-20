@@ -74,14 +74,14 @@
 
             <Grid Grid.Row="2">
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
-                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}" Margin="0,0,0,20">
+                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}" Margin="0,0,0,20" SelectionChanged="DgvEmployees_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
                             <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>
                             <DataGridTextColumn Header="Életkor" Width="60" Binding="{Binding Path=Age}"/>
-                            <DataGridTextColumn Header="Beosztás" Width="200" Binding="{Binding Path=Occupation}"/>
-                            <DataGridTextColumn Header="Lakcím" Width="180" Binding="{Binding Path=Address}"/>
-                            <DataGridTextColumn Header="Email" Width="150" Binding="{Binding Path=Email}"/>
+                            <DataGridTextColumn Header="Beosztás" Width="120" Binding="{Binding Path=Occupation}"/>
+                            <DataGridTextColumn Header="Lakcím" Width="240" Binding="{Binding Path=Address}"/>
+                            <DataGridTextColumn Header="Email" Width="170" Binding="{Binding Path=Email}"/>
                             <DataGridTextColumn Header="Telefon" Width="120" Binding="{Binding Path=Phone}"/>
                             <DataGridTextColumn Header="Szakterület" Width="150" Binding="{Binding Path=Speciality}"/>
                             <DataGridTextColumn Header="Fizetés" Width="*" Binding="{Binding Path=Salary}"/>

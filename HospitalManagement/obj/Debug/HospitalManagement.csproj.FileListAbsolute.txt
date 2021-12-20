@@ -229,7 +229,6 @@ D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csproj.GenerateRes
 D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csproj.CoreCompileInputs.cache
 D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csproj.Fody.CopyLocal.cache
 D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csproj.CopyComplete
-D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csprojAssemblyReference.cache
 D:\szoftechv2\HospitalManagement\bin\Debug\Microsoft.Win32.Primitives.dll
 D:\szoftechv2\HospitalManagement\bin\Debug\netstandard.dll
 D:\szoftechv2\HospitalManagement\bin\Debug\System.AppContext.dll
@@ -510,3 +509,4 @@ D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\amd64\vcruntime140.dll
 D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\amd64\vcruntime140_1.dll
 D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\TraceReloggerLib.dll
 D:\Szofttech. Beadandó\HospitalManagement\bin\Debug\Dia2Lib.dll
+D:\szoftechv2\HospitalManagement\obj\Debug\HospitalManagement.csprojAssemblyReference.cache

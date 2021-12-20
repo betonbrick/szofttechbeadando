@@ -50,7 +50,6 @@
             <Trigger Property="IsSelected" Value="True">
                 <Setter Property="Foreground" Value="#761eb0"/>
                 <Setter Property="FontWeight" Value="Bold"/>
-                <Setter Property="FontSize" Value="15"/>
             </Trigger>
         </Style.Triggers>
     </Style>

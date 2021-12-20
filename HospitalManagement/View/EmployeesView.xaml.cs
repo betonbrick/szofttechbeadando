@@ -3,6 +3,7 @@ using HospitalManagement.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -24,7 +25,7 @@ namespace HospitalManagement.View
 
             cmbxSpecialty.Items.Add("Belgyógyász");
             cmbxSpecialty.Items.Add("Endokrinológus");
-            cmbxSpecialty.Items.Add("Gasztroenterológusz");
+            cmbxSpecialty.Items.Add("Gasztroenterológus");
             cmbxSpecialty.Items.Add("Sebész");
             cmbxSpecialty.Items.Add("Szülész-nőgyógyász");
             cmbxSpecialty.Items.Add("Fül-orr-gégész");
@@ -75,6 +76,17 @@ namespace HospitalManagement.View
             else
             {
                 txtEmail.Background = Brushes.IndianRed;
+            }
+        }
+
+        private void DgvEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGrid dg = (DataGrid)sender;
+            DataRowView rowSelected = dg.SelectedItem as DataRowView;
+
+            if (rowSelected!=null)
+            {
+                txtId.Text = rowSelected["id"].ToString();
             }
         }
     }

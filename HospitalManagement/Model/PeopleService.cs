@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HospitalManagement.Model
 {
-    [MemoryDiagnoser]
+    //[MemoryDiagnoser]
     public class PeopleService
     {
         
@@ -21,7 +21,7 @@ namespace HospitalManagement.Model
         }
         
         // EMPLOYEE TÁBLA ÖSSZES ELEME
-        [Benchmark]
+        //[Benchmark]
         public List<EmployeeDTO> getAllEmployees()
         {
             List<EmployeeDTO> employeeDTOs = new List<EmployeeDTO>();
@@ -55,7 +55,7 @@ namespace HospitalManagement.Model
         }
 
         // PATIENT TÁBLA ÖSSZES ELEME
-        [Benchmark]
+        //[Benchmark]
         public List<PatientDTO> getAllPatients()
         {
             List<PatientDTO> patientDTOs = new List<PatientDTO>();
