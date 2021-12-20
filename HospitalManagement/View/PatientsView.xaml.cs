@@ -1,4 +1,5 @@
-﻿using HospitalManagement.ViewModel;
+﻿using HospitalManagement.Model;
+using HospitalManagement.ViewModel;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
@@ -84,6 +85,19 @@ namespace HospitalManagement.View
             {
                 txtPhone.Background = Brushes.IndianRed;
             }
+        }
+
+        private void DgvPatients_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = (PatientDTO)dgvPatients.SelectedItem;
+            txtId.Text = list.Id.ToString();
+            txtName.Text = list.Name.ToString();
+            txtAddress.Text = list.Address.ToString();
+            txtAge.Text = list.Age.ToString();
+            txtEmail.Text = list.Email.ToString();
+            txtPhone.Text = list.Phone.ToString();
+            cmbxClass.Text = list.Class.ToString();
+           
         }
     }
 }
