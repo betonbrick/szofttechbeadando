@@ -1,12 +1,11 @@
 ﻿using HospitalManagement.Model;
-using System;
 using Xunit;
 
 namespace HospitalManagementTests
 {
     public class UnitTest1
     {
-        Hashing hash = new Hashing();
+        Hashing hashing = new Hashing();
         AuthenticatorService authServ = new AuthenticatorService();
         private PeopleService EmployeeService;
         private PeopleService PatientService;
@@ -15,7 +14,7 @@ namespace HospitalManagementTests
         public void Create_MD5Hash_Should_Work()
         {
             string actual = "21232F297A57A5A743894A0E4A801FC3";
-            string expected = hash.createMD5Hash("admin");
+            string expected = hashing.createMD5Hash("admin");
             Assert.Equal(expected, actual);
         }
 
@@ -23,7 +22,7 @@ namespace HospitalManagementTests
         public void Create_MD5Hash_Should_Not_Work()
         {
             string actual = "21232F297A57A5A743894A0E4A801FC333";
-            string expected = hash.createMD5Hash("admin");
+            string expected = hashing.createMD5Hash("admin");
             Assert.NotEqual(expected, actual);
         }
 
@@ -32,7 +31,7 @@ namespace HospitalManagementTests
         {
             string username = "admin";
             string password = "admin";
-            bool expected = authServ.Authenticate(username, hash.createMD5Hash(password));
+            bool expected = authServ.Authenticate(username, hashing.createMD5Hash(password));
             Assert.True(expected);
         }
 
@@ -41,7 +40,7 @@ namespace HospitalManagementTests
         {
             string username = "admin";
             string password = "adminnn";
-            bool expected = authServ.Authenticate(username, hash.createMD5Hash(password));
+            bool expected = authServ.Authenticate(username, hashing.createMD5Hash(password));
             Assert.False(expected);
         }
 
@@ -51,7 +50,25 @@ namespace HospitalManagementTests
         {
             string username = "adminnn";
             string password = "admin";
-            bool expected = authServ.Authenticate(username, hash.createMD5Hash(password));
+            bool expected = authServ.Authenticate(username, hashing.createMD5Hash(password));
+            Assert.False(expected);
+        }
+
+        [Fact]
+        public void Login_Unsuccessful_Username_Is_Missing()
+        {
+            string username = "";
+            string password = "admin";
+            bool expected = authServ.Authenticate(username, hashing.createMD5Hash(password));
+            Assert.False(expected);
+        }
+
+        [Fact]
+        public void Login_Unsuccessful_Password_Is_Missing()
+        {
+            string username = "admin";
+            string password = "";
+            bool expected = authServ.Authenticate(username, hashing.createMD5Hash(password));
             Assert.False(expected);
         }
 
@@ -60,7 +77,7 @@ namespace HospitalManagementTests
         {
             string username = "";
             string password = "";
-            bool expected = authServ.Authenticate(username, hash.createMD5Hash(password));
+            bool expected = authServ.Authenticate(username, hashing.createMD5Hash(password));
             Assert.False(expected);
         }
 
