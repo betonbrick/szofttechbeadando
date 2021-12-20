@@ -94,6 +94,10 @@ namespace HospitalManagement.View
 
         }
 
-        
+        private void DgvEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var list = (EmployeeDTO)dgvEmployees.SelectedItem;
+            txtId.Text = list.Id.ToString();
+        }
     }
 }
