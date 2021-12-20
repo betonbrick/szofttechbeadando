@@ -1,7 +1,5 @@
 ﻿using HospitalManagement.Model;
 using System;
-using System.Collections.ObjectModel;
-using System.Linq;
 using Xunit;
 
 namespace HospitalManagementTests
@@ -11,6 +9,7 @@ namespace HospitalManagementTests
         Hashing hash = new Hashing();
         AuthenticatorService authServ = new AuthenticatorService();
         private PeopleService EmployeeService;
+        private PeopleService PatientService;
 
         [Fact]
         public void Create_MD5Hash_Should_Work()
@@ -87,6 +86,27 @@ namespace HospitalManagementTests
         }
 
         [Fact]
+        public void Update_Employee_Should_Work()
+        {
+            bool isUpdated = false;
+            EmployeeService = new PeopleService();
+            EmployeeDTO employee = new EmployeeDTO();
+
+            employee.Id = 1000;
+            employee.Name = "Nagy Ferenc";
+            employee.Age = 50;
+            employee.Address = "Budapest";
+            employee.Email = "nagyferenc@gmail.com";
+            employee.Phone = 207894561;
+            employee.Speciality = "Urológus";
+            employee.Salary = 800000;
+
+            isUpdated = EmployeeService.updateEmployee(employee, false);
+
+            Assert.True(isUpdated);
+        }
+
+        [Fact]
         public void Delete_Employee_Should_Work()
         {
             bool isDeleted = false;
@@ -96,6 +116,60 @@ namespace HospitalManagementTests
             employee.Id = 1000;
 
             isDeleted = EmployeeService.deleteEmployee(employee.Id);
+
+            Assert.True(isDeleted);
+        }
+
+        [Fact]
+        public void Add_Patient_Should_Work()
+        {
+            bool isSaved = false;
+            PatientService = new PeopleService();
+            PatientDTO patient = new PatientDTO();
+
+            patient.Id = 1000;
+            patient.Name = "Kénes István";
+            patient.Age = 38;
+            patient.Address = "Budapest";
+            patient.Email = "kenesistvan@gmail.com";
+            patient.Class = "Sebészet";
+            patient.Phone = 201234567;
+
+            isSaved = PatientService.addPatient(patient);
+
+            Assert.True(isSaved);
+        }
+
+        [Fact]
+        public void Update_Patient_Should_Work()
+        {
+            bool isUpdated = false;
+            PatientService = new PeopleService();
+            PatientDTO patient = new PatientDTO();
+
+            patient.Id = 1000;
+            patient.Name = "Kénes István";
+            patient.Age = 40;
+            patient.Address = "Budapest";
+            patient.Email = "nagyferenc22@gmail.com";
+            patient.Class = "Urológia";
+            patient.Phone = 207894561;
+
+            isUpdated = PatientService.updatePatient(patient);
+
+            Assert.True(isUpdated);
+        }
+
+        [Fact]
+        public void Delete_Patient_Should_Work()
+        {
+            bool isDeleted = false;
+            PatientService = new PeopleService();
+            PatientDTO patient = new PatientDTO();
+
+            patient.Id = 1000;
+
+            isDeleted = PatientService.deletePatient(patient.Id);
 
             Assert.True(isDeleted);
         }
