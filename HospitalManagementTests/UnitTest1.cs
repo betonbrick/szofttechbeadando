@@ -138,17 +138,6 @@ namespace HospitalManagementTests
             Assert.Null(employee);
         }
 
-
-
-
-
-
-
-
-
-
-
-
         [Fact]
         public void Add_Patient_Should_Work()
         {
@@ -201,6 +190,24 @@ namespace HospitalManagementTests
             isDeleted = PatientService.deletePatient(patient.Id);
 
             Assert.True(isDeleted);
+        }
+
+        [Fact]
+        public void Search_Patient_Should_Not_Be_Null()
+        {
+            PatientService = new PeopleService();
+            PatientDTO patient = PatientService.searchPatient("Kiss Lajos");
+
+            Assert.NotNull(patient);
+        }
+
+        [Fact]
+        public void Search_Patient_Should_Be_Null()
+        {
+            PatientService = new PeopleService();
+            PatientDTO patient = PatientService.searchPatient("Varga Tibor");
+
+            Assert.Null(patient);
         }
     }
 }
