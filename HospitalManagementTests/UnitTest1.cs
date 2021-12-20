@@ -121,6 +121,35 @@ namespace HospitalManagementTests
         }
 
         [Fact]
+        public void Search_Employee_Should_Not_Be_Null()
+        {
+            EmployeeService = new PeopleService();
+            EmployeeDTO employee = EmployeeService.searchEmployee("Dr. Varga Mónika");
+
+            Assert.NotNull(employee);
+        }
+
+        [Fact]
+        public void Search_Employee_Should_Be_Null()
+        {
+            EmployeeService = new PeopleService();
+            EmployeeDTO employee = EmployeeService.searchEmployee("Dr. Szőke András");
+
+            Assert.Null(employee);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        [Fact]
         public void Add_Patient_Should_Work()
         {
             bool isSaved = false;
