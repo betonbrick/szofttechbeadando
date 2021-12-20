@@ -73,5 +73,17 @@ namespace HospitalManagement.View
                 txtEmail.Background = Brushes.IndianRed;
             }
         }
+
+        private void TxtPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((new Regex(@"^[0-9]{9}$")).IsMatch(txtPhone.Text))
+            {
+                txtPhone.Background = Brushes.White;
+            }
+            else
+            {
+                txtPhone.Background = Brushes.IndianRed;
+            }
+        }
     }
 }

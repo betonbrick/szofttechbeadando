@@ -54,8 +54,8 @@
                 <Grid Grid.Row="3">
                     <TextBlock Text="Email" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                     <TextBox x:Name="txtEmail" FontSize="22" Width="270" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Email, Mode=TwoWay}" TextChanged="txtEmail_TextChanged"/>
-                    <TextBlock Text="Telefon" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0"/>
-                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="590,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Phone, Mode=TwoWay}"/>
+                    <TextBlock Text="Telefon (+36)" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="490,0,0,0"/>
+                    <TextBox x:Name="txtPhone" FontSize="22" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="640,0,0,0" BorderThickness="0" Text="{Binding Path=CurrEmp.Phone, Mode=TwoWay}" TextChanged="TxtPhone_TextChanged"/>
                 </Grid>
 
                 <Grid Grid.Row="4">
@@ -74,7 +74,7 @@
 
             <Grid Grid.Row="2">
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
-                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}" Margin="0,0,0,20" SelectionChanged="DgvEmployees_SelectionChanged">
+                    <DataGrid x:Name="dgvEmployees" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Employees, Mode=TwoWay}" Margin="0,0,0,20">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
                             <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>

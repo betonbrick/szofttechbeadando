@@ -79,15 +79,21 @@ namespace HospitalManagement.View
             }
         }
 
-        private void DgvEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            DataGrid dg = (DataGrid)sender;
-            DataRowView rowSelected = dg.SelectedItem as DataRowView;
+       
 
-            if (rowSelected!=null)
+        private void TxtPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((new Regex(@"^[0-9]{9}$")).IsMatch(txtPhone.Text))
             {
-                txtId.Text = rowSelected["id"].ToString();
+                txtPhone.Background = Brushes.White;
             }
+            else
+            {
+                txtPhone.Background = Brushes.IndianRed;
+            }
+
         }
+
+        
     }
 }
