@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:HospitalManagement"
         xmlns:components="clr-namespace:HospitalManagement.Components"
         mc:Ignorable="d"
+        Icon="Assets/app_icon.png"
         Title="Login" Height="550" Width="350" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Transparent" AllowsTransparency="True" SnapsToDevicePixels="True">
 
     <Border Background="#e4ebed" CornerRadius="0,0,20,20" MouseDown="Border_MouseDown">
