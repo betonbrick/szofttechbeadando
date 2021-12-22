@@ -87,16 +87,39 @@ namespace HospitalManagement.View
             }
         }
 
-        private void DgvPatients_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void dgvPatients_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
         {
-            //var list = (PatientDTO)dgvPatients.SelectedItem;
-            //txtId.Text = list.Id.ToString();
-            //txtName.Text = list.Name.ToString();
-            //txtAddress.Text = list.Address.ToString();
-            //txtAge.Text = list.Age.ToString();
-            //txtEmail.Text = list.Email.ToString();
-            //txtPhone.Text = list.Phone.ToString();
-            //cmbxClass.Text = list.Class.ToString();
+            int Id = 0;
+            string Name = "";
+            string Address = "";
+            int Age = 0;
+            string Email = "";
+            int Phone = 0;
+            string Class = "";
+
+            if (dgvPatients.SelectedItems.Count > 0)
+            {
+                PatientDTO patient = new PatientDTO();
+                foreach (var item in dgvPatients.SelectedItems)
+                {
+                    patient = item as PatientDTO;
+                    Id = patient.Id;
+                    Name = patient.Name;
+                    Address = patient.Address;
+                    Age = patient.Age;
+                    Email = patient.Email;
+                    Phone = patient.Phone;
+                    Class = patient.Class;
+                }
+            }
+
+            txtId.Text = Id.ToString();
+            txtName.Text = Name.ToString();
+            txtAddress.Text = Address.ToString();
+            txtAge.Text = Age.ToString();
+            txtEmail.Text = Email.ToString();
+            txtPhone.Text = Phone.ToString();
+            cmbxClass.Text = Class.ToString();
         }
     }
 }

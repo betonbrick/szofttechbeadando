@@ -1,9 +1,5 @@
-﻿using HospitalManagement.Model;
-using HospitalManagement.ViewModel;
+﻿using HospitalManagement.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -92,27 +88,6 @@ namespace HospitalManagement.View
                 txtPhone.Background = Brushes.IndianRed;
             }
 
-        }
-
-        private void DgvEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //var list = (EmployeeDTO)dgvEmployees.SelectedItem;
-            //txtId.Text = list.Id.ToString();
-            //txtName.Text = list.Name.ToString();
-            //txtAddress.Text = list.Address.ToString();
-            //txtAge.Text = list.Age.ToString();
-            //txtEmail.Text = list.Email.ToString();
-            //txtSalary.Text = list.Salary.ToString();
-            //cmbxSpecialty.Text = list.Speciality.ToString();
-            //txtPhone.Text = list.Phone.ToString();
-            //if (list.Occupation=="Orvos")
-            //{
-            //    chckBxOccupation.IsChecked = false;
-            //}
-            //else
-            //{
-            //    chckBxOccupation.IsChecked = true;
-            //}
         }
     }
 }

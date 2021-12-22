@@ -59,7 +59,7 @@
 
             <Grid Grid.Row="2">
                 <Border Background="White" CornerRadius="12" Margin="30,10,30,0">
-                    <DataGrid x:Name="dgvPatients" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Patients, Mode=TwoWay}" Margin="0,0,0,20" SelectionChanged="DgvPatients_SelectionChanged">
+                    <DataGrid x:Name="dgvPatients" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding Patients, Mode=TwoWay}" Margin="0,0,0,20" SelectedCellsChanged="dgvPatients_SelectedCellsChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Width="60" Binding="{Binding Path=Id}"/>
                             <DataGridTextColumn Header="Név" Width="200" Binding="{Binding Path=Name}"/>
@@ -82,7 +82,6 @@
                 <Button Content="Törlés" Style="{StaticResource DeleteBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,30,0" Command="{Binding Path=DeletePat}" Click="Button_Click_2"/>
                 <Button Content="Frissítés" Style="{StaticResource UpdateBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,170,0" Command="{Binding Path=UpdatePat}" Click="Button_Click_1"/>
                 <Button Content="Nyomtatás" Style="{StaticResource PrintBtnStyle}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,0" Command="{Binding Path=PrintData}"/>
-                <!-- A NYOMTATÁSNAK KELL COMMAND -->
             </Grid>
         </Grid>
     </Border>
