@@ -150,7 +150,7 @@ namespace HospitalManagementTests
         public void Search_Employee_Should_Be_Null()
         {
             EmployeeService = new PeopleService();
-            EmployeeDTO employee = EmployeeService.searchEmployee("Dr. Szőke András");
+            EmployeeDTO employee = EmployeeService.searchEmployee("");
 
             Assert.Null(employee);
         }
