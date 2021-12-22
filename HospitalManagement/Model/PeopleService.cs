@@ -2,15 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HospitalManagement.Model
 {
     //[MemoryDiagnoser]
     public class PeopleService
     {
-
         private HospitalEntities employeeEntities;
         private HospitalEntities patientEntities;
 
@@ -144,9 +141,13 @@ namespace HospitalManagement.Model
         {
             bool isPatAdded = false;
 
-            if (newPatient.Id == 0)
+            if (newPatient.Id == 0 || newPatient.Id < 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0.");
+                throw new ArgumentException("Az azonosító nem lehet 0, vagy kisebb mint 0.");
+            }
+            else if (newPatient.Age < 0)
+            {
+                throw new ArgumentException("Az alkalmazott életkora nem megfelelő.");
             }
             else
             {
@@ -180,9 +181,9 @@ namespace HospitalManagement.Model
         {
             bool isEmpUpdated = false;
 
-            if (employeeUpdate.Id == 0)
+            if (employeeUpdate.Id == 0 || employeeUpdate.Id < 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0.");
+                throw new ArgumentException("Az azonosító nem lehet 0, vagy kisebb mint 0.");
             }
             else
             {
