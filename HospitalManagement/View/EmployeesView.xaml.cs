@@ -96,23 +96,23 @@ namespace HospitalManagement.View
 
         private void DgvEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var list = (EmployeeDTO)dgvEmployees.SelectedItem;
-            txtId.Text = list.Id.ToString();
-            txtName.Text = list.Name.ToString();
-            txtAddress.Text = list.Address.ToString();
-            txtAge.Text = list.Age.ToString();
-            txtEmail.Text = list.Email.ToString();
-            txtSalary.Text = list.Salary.ToString();
-            cmbxSpecialty.Text = list.Speciality.ToString();
-            txtPhone.Text = list.Phone.ToString();
-            if (list.Occupation=="Orvos")
-            {
-                chckBxOccupation.IsChecked = false;
-            }
-            else
-            {
-                chckBxOccupation.IsChecked = true;
-            }
+            //var list = (EmployeeDTO)dgvEmployees.SelectedItem;
+            //txtId.Text = list.Id.ToString();
+            //txtName.Text = list.Name.ToString();
+            //txtAddress.Text = list.Address.ToString();
+            //txtAge.Text = list.Age.ToString();
+            //txtEmail.Text = list.Email.ToString();
+            //txtSalary.Text = list.Salary.ToString();
+            //cmbxSpecialty.Text = list.Speciality.ToString();
+            //txtPhone.Text = list.Phone.ToString();
+            //if (list.Occupation=="Orvos")
+            //{
+            //    chckBxOccupation.IsChecked = false;
+            //}
+            //else
+            //{
+            //    chckBxOccupation.IsChecked = true;
+            //}
         }
     }
 }
