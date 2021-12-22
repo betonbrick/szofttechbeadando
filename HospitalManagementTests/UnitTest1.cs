@@ -222,7 +222,7 @@ namespace HospitalManagementTests
         public void Search_Patient_Should_Be_Null()
         {
             PatientService = new PeopleService();
-            PatientDTO patient = PatientService.searchPatient("Varga Tibor");
+            PatientDTO patient = PatientService.searchPatient("");
 
             Assert.Null(patient);
         }

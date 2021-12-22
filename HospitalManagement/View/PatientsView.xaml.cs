@@ -86,40 +86,5 @@ namespace HospitalManagement.View
                 txtPhone.Background = Brushes.IndianRed;
             }
         }
-
-        private void dgvPatients_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
-        {
-            int Id = 0;
-            string Name = "";
-            string Address = "";
-            int Age = 0;
-            string Email = "";
-            int Phone = 0;
-            string Class = "";
-
-            if (dgvPatients.SelectedItems.Count > 0)
-            {
-                PatientDTO patient = new PatientDTO();
-                foreach (var item in dgvPatients.SelectedItems)
-                {
-                    patient = item as PatientDTO;
-                    Id = patient.Id;
-                    Name = patient.Name;
-                    Address = patient.Address;
-                    Age = patient.Age;
-                    Email = patient.Email;
-                    Phone = patient.Phone;
-                    Class = patient.Class;
-                }
-            }
-
-            txtId.Text = Id.ToString();
-            txtName.Text = Name.ToString();
-            txtAddress.Text = Address.ToString();
-            txtAge.Text = Age.ToString();
-            txtEmail.Text = Email.ToString();
-            txtPhone.Text = Phone.ToString();
-            cmbxClass.Text = Class.ToString();
-        }
     }
 }

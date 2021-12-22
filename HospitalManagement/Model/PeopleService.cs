@@ -88,13 +88,13 @@ namespace HospitalManagement.Model
         {
             bool isEmpAdded = false;
 
-            if (newEmployee.Id == 0)
+            if (newEmployee.Id <= 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0.");
+                throw new ArgumentException("Hibás azonosító!");
             }
             else if (newEmployee.Age < 16 || newEmployee.Age > 64)
             {
-                throw new ArgumentException("Az alkalmazott életkora nem megfelelő.");
+                throw new ArgumentException("Az alkalmazott életkora nem megfelelő!");
             }
             else
             {
@@ -129,7 +129,7 @@ namespace HospitalManagement.Model
                 }
                 catch (Exception)
                 {
-                    throw new ArgumentException("Van már ilyen azonosító a listában.");
+                    throw new ArgumentException("Van már ilyen azonosító a listában!");
                 }
 
                 return isEmpAdded;
@@ -141,13 +141,13 @@ namespace HospitalManagement.Model
         {
             bool isPatAdded = false;
 
-            if (newPatient.Id == 0 || newPatient.Id < 0)
+            if (newPatient.Id <= 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0, vagy kisebb mint 0.");
+                throw new ArgumentException("Hibás azonosító!");
             }
             else if (newPatient.Age < 0)
             {
-                throw new ArgumentException("Az alkalmazott életkora nem megfelelő.");
+                throw new ArgumentException("Az alkalmazott életkora nem megfelelő!");
             }
             else
             {
@@ -169,7 +169,7 @@ namespace HospitalManagement.Model
                 }
                 catch (Exception)
                 {
-                    throw new ArgumentException("Van már ilyen azonosító a listában.");
+                    throw new ArgumentException("Van már ilyen azonosító a listában!");
                 }
 
                 return isPatAdded;
@@ -181,9 +181,13 @@ namespace HospitalManagement.Model
         {
             bool isEmpUpdated = false;
 
-            if (employeeUpdate.Id == 0 || employeeUpdate.Id < 0)
+            if (employeeUpdate.Id <= 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0, vagy kisebb mint 0.");
+                throw new ArgumentException("Hibás azonosító!");
+            }
+            else if (employeeUpdate.Age < 16 || employeeUpdate.Age > 64)
+            {
+                throw new ArgumentException("Az alkalmazott életkora nem megfelelő!");
             }
             else
             {
@@ -227,9 +231,13 @@ namespace HospitalManagement.Model
         {
             bool isPatUpdated = false;
 
-            if (patientUpdate.Id == 0)
+            if (patientUpdate.Id <= 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0.");
+                throw new ArgumentException("Hibás azonosító!");
+            }
+            else if (patientUpdate.Age < 0)
+            {
+                throw new ArgumentException("A beteg életkora nem megfelelő!");
             }
             else
             {
@@ -261,9 +269,9 @@ namespace HospitalManagement.Model
         {
             bool isEmpDeleted = false;
 
-            if (id == 0)
+            if (id <= 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0.");
+                throw new ArgumentException("Hibás azonosító!");
             }
             else
             {
@@ -290,9 +298,9 @@ namespace HospitalManagement.Model
         {
             bool isPatDeleted = false;
 
-            if (id == 0)
+            if (id <= 0)
             {
-                throw new ArgumentException("Az azonosító nem lehet 0.");
+                throw new ArgumentException("Hibás azonosító!");
             }
             else
             {
