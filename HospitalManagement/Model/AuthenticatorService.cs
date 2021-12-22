@@ -34,7 +34,11 @@ namespace HospitalManagement.Model
 
         public bool checkCredentials(string username, string password)
         {
-            if(username.Equals("") || password.Equals(""))
+            if (username == null || password == null)
+            {
+                return false;
+            }
+            else if (username.Equals("") || password.Equals(""))
             {
                 return false;
             }

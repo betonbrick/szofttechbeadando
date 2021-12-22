@@ -46,9 +46,9 @@ namespace HospitalManagement.ViewModel
 
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                throw ex;
+                Message = "Érvénytelen bejelentkezés!";
             }
         }
     }
